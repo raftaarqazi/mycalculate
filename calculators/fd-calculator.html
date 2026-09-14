@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free FD Calculator - Calculate Fixed Deposit maturity amount and interest earned. Any bank, any tenure.">
+<meta name="keywords" content="fd calculator, fixed deposit calculator, fd maturity calculator">
+<title>FD Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FD Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate Fixed Deposit maturity amount and interest instantly.">
+<meta property="og:url" content="https://mycalculate.in/calculators/fd-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FD Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate FD maturity instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"FD Calculator","url":"https://mycalculate.in/calculators/fd-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate Fixed Deposit maturity amount and interest earned.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › FD Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is a Fixed Deposit (FD)?</h2>
+    <p>A Fixed Deposit is a financial instrument where you deposit a lump sum with a bank or NBFC for a fixed tenure at a fixed interest rate. FDs are one of the safest investment options in India — your principal is guaranteed (up to ₹5 lakh per bank by DICGC insurance).</p>
+
+    <h2>How FD Interest is Calculated</h2>
+    <p>Most banks use compound interest for FDs:</p>
+    <p><em>Maturity = P × (1 + R/100)^T</em></p>
+    <p>Where: <strong>P</strong> = Deposit amount, <strong>R</strong> = Annual interest rate, <strong>T</strong> = Time in years.</p>
+
+    <h2>Example Calculation</h2>
+    <p>₹1,00,000 at 7% for 5 years:</p>
+    <ul>
+      <li>Maturity = 1,00,000 × (1.07)^5 = <strong>₹1,40,255</strong></li>
+      <li>Interest earned = ₹40,255</li>
+    </ul>
+
+    <h2>FD Interest Rates (Typical)</h2>
+    <ul>
+      <li><strong>SBI:</strong> 2.9% – 7.0%</li>
+      <li><strong>HDFC:</strong> 3.0% – 7.4%</li>
+      <li><strong>ICICI:</strong> 3.0% – 7.25%</li>
+      <li><strong>Small Finance Banks:</strong> up to 8.5%</li>
+    </ul>
+    <p>Senior citizens usually get 0.5% extra.</p>
+
+    <h2>Types of FDs</h2>
+    <ul>
+      <li><strong>Regular FD</strong> — Fixed rate, fixed tenure</li>
+      <li><strong>Cumulative FD</strong> — Interest reinvested, paid at maturity</li>
+      <li><strong>Non-Cumulative FD</strong> — Interest paid monthly/quarterly</li>
+      <li><strong>Tax Saver FD</strong> — 5-year lock-in, tax deduction under 80C</li>
+    </ul>
+
+    <h2>FD vs Other Options</h2>
+    <p>FDs are safest but returns are modest. For higher returns, consider debt mutual funds, PPF, or NPS. Always keep emergency funds in FDs for liquidity.</p>
+
+    <h2>Why Use Our FD Calculator?</h2>
+    <p>Compare FD returns across different rates and tenures instantly. Plan your savings goals with clear maturity projections.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'fd');
+  renderRelatedLinks('fd');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

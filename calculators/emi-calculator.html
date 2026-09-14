@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free EMI Calculator - Calculate monthly EMI for home loan, car loan, personal loan instantly. See total interest and payment breakdown.">
+<meta name="keywords" content="emi calculator, home loan emi, car loan emi, personal loan emi, loan calculator">
+<title>EMI Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EMI Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate monthly EMI for home, car, or personal loans instantly.">
+<meta property="og:url" content="https://mycalculate.in/calculators/emi-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EMI Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate monthly EMI for any loan instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"EMI Calculator","url":"https://mycalculate.in/calculators/emi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate monthly EMI for home, car, or personal loans.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › EMI Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is EMI?</h2>
+    <p>EMI stands for Equated Monthly Installment. It's the fixed amount you pay every month to repay a loan. Each EMI consists of two parts: the <strong>principal</strong> (the amount you borrowed) and the <strong>interest</strong> (the cost of borrowing). In the early months, the interest component is higher; in the later months, the principal component grows.</p>
+
+    <h2>EMI Formula</h2>
+    <p>The formula to calculate EMI is: <em>EMI = P × R × (1+R)^N ÷ ((1+R)^N − 1)</em></p>
+    <p>Where: <strong>P</strong> = Principal loan amount, <strong>R</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100), <strong>N</strong> = Number of monthly installments.</p>
+
+    <h2>Example Calculation</h2>
+    <p>If you take a ₹5,00,000 home loan at 8.5% annual interest for 5 years (60 months):</p>
+    <ul>
+      <li>Monthly interest rate = 8.5 ÷ 12 ÷ 100 = 0.007083</li>
+      <li>EMI = 5,00,000 × 0.007083 × (1.007083)^60 ÷ ((1.007083)^60 − 1) ≈ <strong>₹10,259</strong></li>
+      <li>Total payment = ₹10,259 × 60 = ₹6,15,540</li>
+      <li>Total interest = ₹1,15,540</li>
+    </ul>
+
+    <h2>Factors That Affect EMI</h2>
+    <ul>
+      <li><strong>Loan Amount</strong> — Higher loan = higher EMI</li>
+      <li><strong>Interest Rate</strong> — Small rate changes have big impact over long tenure</li>
+      <li><strong>Tenure</strong> — Longer tenure = lower EMI but more total interest</li>
+    </ul>
+
+    <h2>Tips to Reduce Your EMI</h2>
+    <ul>
+      <li>Make a larger down payment to reduce principal</li>
+      <li>Negotiate for a lower interest rate — even 0.5% saves lakhs</li>
+      <li>Choose a shorter tenure if you can afford higher EMIs</li>
+      <li>Make prepayments whenever you have surplus cash</li>
+    </ul>
+
+    <h2>Why Use Our EMI Calculator?</h2>
+    <p>Our free EMI calculator gives you instant results with a clear breakdown of monthly payment, total interest, and total repayment. Use it for home loans, car loans, personal loans, education loans, or any other EMI-based borrowing.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'emi');
+  renderRelatedLinks('emi');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

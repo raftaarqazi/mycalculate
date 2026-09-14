@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free BMI Calculator - Calculate your Body Mass Index and check if you're underweight, normal, overweight or obese.">
+<meta name="keywords" content="bmi calculator, body mass index, bmi chart, healthy weight">
+<title>BMI Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BMI Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate your Body Mass Index instantly. Check if you're underweight, normal, overweight or obese.">
+<meta property="og:url" content="https://mycalculate.in/calculators/bmi-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BMI Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate your BMI instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://mycalculate.in/calculators/bmi-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"Calculate Body Mass Index (BMI) and check your weight category.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › BMI Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is BMI?</h2>
+    <p>BMI (Body Mass Index) is a measure of body fat based on your weight and height. It's used worldwide as a quick screening tool to categorize adults into underweight, normal weight, overweight, or obese. BMI doesn't measure body fat directly, but it correlates well with more direct measures.</p>
+
+    <h2>BMI Formula</h2>
+    <p><em>BMI = Weight (kg) ÷ Height (m)²</em></p>
+    <p>Example: Weight 70 kg, Height 1.70 m → BMI = 70 ÷ (1.70 × 1.70) = 24.2</p>
+
+    <h2>BMI Categories (WHO)</h2>
+    <ul>
+      <li><strong>Below 18.5</strong> — Underweight</li>
+      <li><strong>18.5 – 24.9</strong> — Normal weight</li>
+      <li><strong>25.0 – 29.9</strong> — Overweight</li>
+      <li><strong>30.0 and above</strong> — Obese</li>
+    </ul>
+
+    <h2>Limitations of BMI</h2>
+    <p>BMI has some limitations you should know:</p>
+    <ul>
+      <li>Doesn't distinguish between muscle and fat — athletes may show "overweight"</li>
+      <li>Doesn't account for age, gender, or body composition</li>
+      <li>Not accurate for pregnant women</li>
+      <li>Not suitable for children (use BMI-for-age percentile)</li>
+    </ul>
+
+    <h2>What to Do With Your BMI</h2>
+    <p>If your BMI is outside the normal range, don't panic. BMI is just a screening tool. Consult a doctor or nutritionist for a full assessment. Lifestyle factors like diet, exercise, sleep, and stress matter just as much.</p>
+
+    <h2>Why Use Our BMI Calculator?</h2>
+    <p>Our free BMI calculator gives you instant results with category classification. Track your BMI over time as you work towards health goals. Works on all devices, no signup required.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'bmi');
+  renderRelatedLinks('bmi');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

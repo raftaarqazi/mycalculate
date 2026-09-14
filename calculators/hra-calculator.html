@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free HRA Exemption Calculator - Calculate HRA tax exemption for salaried employees. Metro & non-metro.">
+<meta name="keywords" content="hra calculator, hra exemption, house rent allowance calculator">
+<title>HRA Exemption Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HRA Exemption Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate HRA tax exemption for salaried employees instantly.">
+<meta property="og:url" content="https://mycalculate.in/calculators/hra-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HRA Exemption Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate HRA exemption instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"HRA Exemption Calculator","url":"https://mycalculate.in/calculators/hra-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate HRA tax exemption under Section 10(13A).","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › HRA Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is HRA?</h2>
+    <p>HRA (House Rent Allowance) is a component of your salary paid by your employer to meet your rental expenses. If you live in a rented house, you can claim HRA exemption on your income tax under Section 10(13A) of the Income Tax Act.</p>
+
+    <h2>HRA Exemption Rules</h2>
+    <p>The exempt amount is the <strong>minimum of three values</strong>:</p>
+    <ol>
+      <li>Actual HRA received from employer</li>
+      <li>50% of basic salary (metro) or 40% (non-metro)</li>
+      <li>Rent paid − 10% of basic salary</li>
+    </ol>
+    <p>The lowest of the three is your HRA exemption. The remaining HRA is taxable.</p>
+
+    <h2>Example Calculation</h2>
+    <p>Basic = ₹6,00,000/year, HRA received = ₹2,40,000, Rent paid = ₹3,00,000, Non-metro:</p>
+    <ul>
+      <li>Actual HRA = ₹2,40,000</li>
+      <li>40% of basic = ₹2,40,000</li>
+      <li>Rent − 10% basic = ₹3,00,000 − ₹60,000 = ₹2,40,000</li>
+      <li><strong>Exemption = ₹2,40,000</strong> (min of three)</li>
+    </ul>
+
+    <h2>Metro vs Non-Metro</h2>
+    <p>Metro cities (50% rule): Delhi, Mumbai, Kolkata, Chennai. Non-metro cities: 40% rule.</p>
+
+    <h2>Who Can Claim HRA?</h2>
+    <ul>
+      <li>Salaried employees with HRA in salary structure</li>
+      <li>Those living in rented accommodation</li>
+      <li>Those paying rent to landlord (not to family unless specific conditions)</li>
+    </ul>
+
+    <h2>Documents Needed</h2>
+    <ul>
+      <li>Rent receipts (if rent > ₹1 lakh/year, landlord PAN required)</li>
+      <li>Rent agreement</li>
+      <li>Form 12BB declaration to employer</li>
+    </ul>
+
+    <h2>Why Use Our HRA Calculator?</h2>
+    <p>Calculate your exact HRA exemption in seconds. Plan your taxes better and maximize your take-home salary legally.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'hra');
+  renderRelatedLinks('hra');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

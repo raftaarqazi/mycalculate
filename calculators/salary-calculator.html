@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Salary Calculator - Calculate take-home salary from CTC. See monthly PF, tax, in-hand salary instantly.">
+<meta name="keywords" content="salary calculator, take home salary, ctc calculator, in-hand salary calculator">
+<title>Salary Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salary Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate take-home salary from CTC instantly. See monthly PF, tax, and in-hand salary.">
+<meta property="og:url" content="https://mycalculate.in/calculators/salary-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Salary Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate take-home salary instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Salary Calculator","url":"https://mycalculate.in/calculators/salary-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate take-home salary from CTC with PF and tax breakdown.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Salary Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is CTC?</h2>
+    <p>CTC stands for Cost to Company — the total amount your employer spends on you annually. It includes basic salary, HRA, special allowances, employer PF contribution, gratuity, and other benefits. CTC is NOT the same as your take-home salary.</p>
+
+    <h2>Take-Home Salary vs CTC</h2>
+    <p>Take-home salary (in-hand salary) is what actually reaches your bank account each month. The gap between CTC and take-home is due to deductions like employee PF, income tax, professional tax, and other contributions.</p>
+
+    <h2>Components of CTC</h2>
+    <ul>
+      <li><strong>Basic Salary:</strong> Usually 40-50% of CTC. This is the base for PF, HRA, and gratuity calculations.</li>
+      <li><strong>HRA:</strong> House Rent Allowance, typically 40-50% of basic salary.</li>
+      <li><strong>Special Allowance:</strong> The remaining amount to balance CTC.</li>
+      <li><strong>PF Contribution:</strong> 12% of basic (employer's share).</li>
+      <li><strong>Gratuity:</strong> 4.81% of basic (accrued, paid on exit).</li>
+    </ul>
+
+    <h2>Major Deductions from Gross Salary</h2>
+    <ul>
+      <li><strong>Employee PF:</strong> 12% of basic salary</li>
+      <li><strong>Income Tax:</strong> Based on your slab (both regimes)</li>
+      <li><strong>Professional Tax:</strong> ₹200-2,500/year (varies by state)</li>
+    </ul>
+
+    <h2>Example: ₹6 LPA CTC Breakdown</h2>
+    <ul>
+      <li>Monthly CTC: ₹50,000</li>
+      <li>Basic (40%): ₹20,000</li>
+      <li>HRA (40% of basic): ₹8,000</li>
+      <li>Special Allowance: ₹17,000</li>
+      <li>Employer PF (12% of basic): ₹2,400</li>
+      <li><strong>Monthly Take-Home: ~₹44,000-46,000</strong></li>
+    </ul>
+
+    <h2>How to Increase Your Take-Home Salary</h2>
+    <ul>
+      <li>Invest in tax-saving instruments (80C, 80D) if you're on the Old Regime</li>
+      <li>Submit rent receipts to claim HRA exemption</li>
+      <li>Choose the New Tax Regime if you don't have many deductions</li>
+      <li>Declare all investments properly to your employer at the start of the year</li>
+      <li>Use Flexible Benefit Plans (FBP) offered by many companies</li>
+    </ul>
+
+    <h2>Old vs New Tax Regime</h2>
+    <p>The Old Regime allows deductions (80C up to ₹1.5 lakh, 80D, HRA, home loan interest). The New Regime has lower slab rates but no major deductions except standard deduction. Choose whichever saves you more tax. Our calculator estimates both.</p>
+
+    <h2>Why Use Our Salary Calculator?</h2>
+    <p>Get a quick estimate of your monthly take-home from CTC. Understand your salary structure, plan your budget better, and know exactly how much reaches your bank each month.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'salary');
+  renderRelatedLinks('salary');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

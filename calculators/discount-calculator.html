@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Discount Calculator - Calculate final price after discount, savings amount instantly. Perfect for shopping.">
+<meta name="keywords" content="discount calculator, percentage off, sale price, savings calculator">
+<title>Discount Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discount Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate final price after discount instantly. Perfect for shopping.">
+<meta property="og:url" content="https://mycalculate.in/calculators/discount-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Discount Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate discount and savings instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Discount Calculator","url":"https://mycalculate.in/calculators/discount-calculator.html","applicationCategory":"ShoppingApplication","operatingSystem":"Any","description":"Calculate final price after percentage discount and savings amount.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Discount Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is a Discount Calculator?</h2>
+    <p>A discount calculator helps you figure out the final price of a product after applying a percentage discount, and how much money you're saving. Essential during sales, festive offers, or any time you're shopping.</p>
+
+    <h2>How Discount is Calculated</h2>
+    <p><strong>Savings = Original Price × Discount % ÷ 100</strong></p>
+    <p><strong>Final Price = Original Price − Savings</strong></p>
+    <p>Example: A shirt costs ₹1,000 with 20% off → Savings = ₹200, Final Price = ₹800.</p>
+
+    <h2>Stacked Discounts (Discount on Discount)</h2>
+    <p>Sometimes stores offer "extra 10% off on already discounted items". This is NOT 30% off — it's calculated on the already-reduced price.</p>
+    <p>Example: ₹1,000 shirt, 20% off → ₹800, then extra 10% off → ₹720. Total discount = 28%, not 30%.</p>
+
+    <h2>Why Use Our Discount Calculator?</h2>
+    <ul>
+      <li>✅ Instant results while shopping</li>
+      <li>✅ Know exact savings before checkout</li>
+      <li>✅ Compare deals across stores</li>
+      <li>✅ Works on mobile — use it inside stores</li>
+      <li>✅ 100% free</li>
+    </ul>
+
+    <h2>Pro Shopping Tips</h2>
+    <ul>
+      <li>Always compare final price, not discount %</li>
+      <li>Watch for "up to X% off" — actual discount may be lower</li>
+      <li>Check if same product is cheaper elsewhere</li>
+      <li>Festive sales often have best deals on specific categories</li>
+    </ul>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'discount');
+  renderRelatedLinks('discount');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

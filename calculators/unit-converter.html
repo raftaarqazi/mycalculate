@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Unit Converter - Convert length, weight, temperature instantly. km to miles, kg to lb, Celsius to Fahrenheit.">
+<meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, km to miles">
+<title>Unit Converter - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Unit Converter - Free Online Tool">
+<meta property="og:description" content="Convert length, weight, and temperature instantly. km to miles, kg to lb, °C to °F.">
+<meta property="og:url" content="https://mycalculate.in/calculators/unit-converter.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unit Converter - Free Online Tool">
+<meta name="twitter:description" content="Convert units instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Unit Converter","url":"https://mycalculate.in/calculators/unit-converter.html","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Convert length, weight, and temperature units instantly.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Unit Converter
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>Why Use a Unit Converter?</h2>
+    <p>Different countries use different measurement systems. India uses the metric system (km, kg, °C) while the US uses imperial (miles, pounds, °F). A unit converter makes it easy to switch between these systems quickly and accurately, without memorizing complex formulas.</p>
+
+    <h2>Common Unit Conversions</h2>
+    <p><strong>Length:</strong></p>
+    <ul>
+      <li>1 km = 0.621371 miles</li>
+      <li>1 mile = 1.60934 km</li>
+      <li>1 meter = 3.28084 feet</li>
+      <li>1 foot = 0.3048 meters</li>
+      <li>1 inch = 2.54 cm</li>
+    </ul>
+
+    <p><strong>Weight:</strong></p>
+    <ul>
+      <li>1 kg = 2.20462 pounds</li>
+      <li>1 pound = 0.453592 kg</li>
+      <li>1 ounce = 28.3495 grams</li>
+    </ul>
+
+    <p><strong>Temperature:</strong></p>
+    <ul>
+      <li>°F = (°C × 9/5) + 32</li>
+      <li>°C = (°F − 32) × 5/9</li>
+      <li>K = °C + 273.15</li>
+    </ul>
+
+    <h2>When You Need Unit Conversion</h2>
+    <ul>
+      <li>Traveling internationally (distance, temperature)</li>
+      <li>Cooking with foreign recipes (weight, volume)</li>
+      <li>Fitness tracking (kg vs lb)</li>
+      <li>Engineering and scientific work</li>
+      <li>Online shopping from foreign websites</li>
+      <li>Education and homework</li>
+      <li>Reading international news and weather reports</li>
+    </ul>
+
+    <h2>Metric vs Imperial Systems</h2>
+    <p><strong>Metric (SI):</strong> Based on multiples of 10 — used by almost all countries. Easy conversions. Units: km, m, cm, kg, g, °C, liter.</p>
+    <p><strong>Imperial:</strong> Used mainly in USA, UK, and a few others. Units: mile, yard, foot, inch, pound, °F, gallon.</p>
+    <p>Most of the world uses metric. The US is the only major country that primarily uses imperial for everyday measurements.</p>
+
+    <h2>Quick Memory Tricks</h2>
+    <ul>
+      <li>1 km ≈ 0.6 miles (rough estimate)</li>
+      <li>1 kg ≈ 2.2 pounds</li>
+      <li>1 meter ≈ 3.3 feet</li>
+      <li>Normal body temp: 37°C = 98.6°F</li>
+      <li>Water boils at 100°C = 212°F</li>
+    </ul>
+
+    <h2>Why Use Our Unit Converter?</h2>
+    <p>Our free converter handles length, weight, and temperature conversions instantly. No signup, works on all devices. Perfect for travelers, cooks, students, and professionals.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'unitConverter');
+  renderRelatedLinks('unitConverter');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

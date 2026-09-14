@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free GST Calculator - Calculate GST online instantly. Add or remove GST at 5%, 12%, 18%, 28% rates. Accurate & mobile-friendly.">
+<meta name="keywords" content="gst calculator, gst calculation, add gst, remove gst, gst rate india">
+<title>GST Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GST Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate GST instantly. Add or remove GST at 5%, 12%, 18%, 28% rates.">
+<meta property="og:url" content="https://mycalculate.in/calculators/gst-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GST Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate GST instantly. Add or remove GST at 5%, 12%, 18%, 28% rates.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"GST Calculator","url":"https://mycalculate.in/calculators/gst-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free GST Calculator to add or remove GST at 5%, 12%, 18%, 28% rates.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › GST Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is GST?</h2>
+    <p>GST (Goods and Services Tax) is a single indirect tax levied on the supply of goods and services in India. It replaced multiple taxes like VAT, Service Tax, and Excise Duty on 1st July 2017. GST is collected at every stage of the supply chain and is ultimately borne by the end consumer.</p>
+
+    <h2>GST Rates in India</h2>
+    <p>The GST Council has classified goods and services into four main tax slabs:</p>
+    <ul>
+      <li><strong>5%</strong> — Essential items like food grains, medicines, economy hotels</li>
+      <li><strong>12%</strong> — Processed foods, business class air tickets, some electronics</li>
+      <li><strong>18%</strong> — Most goods and services including soaps, electronics, restaurants</li>
+      <li><strong>28%</strong> — Luxury items like cars, tobacco, aerated drinks</li>
+    </ul>
+
+    <h2>How to Calculate GST?</h2>
+    <p>There are two scenarios where you need to calculate GST:</p>
+    <p><strong>1. Add GST (Exclusive):</strong> When you know the base price and need to add GST. Formula: <em>GST Amount = Base Price × GST Rate ÷ 100</em>. Example: ₹1,000 at 18% → GST = ₹180, Total = ₹1,180.</p>
+    <p><strong>2. Remove GST (Inclusive):</strong> When the price already includes GST and you want to find the base. Formula: <em>Base Price = Total × 100 ÷ (100 + Rate)</em>. Example: ₹1,180 at 18% → Base = ₹1,000, GST = ₹180.</p>
+
+    <h2>Why Use Our GST Calculator?</h2>
+    <ul>
+      <li>✅ Instant results as you type</li>
+      <li>✅ Both Add and Remove GST modes</li>
+      <li>✅ All 4 GST slabs supported</li>
+      <li>✅ Works on mobile and desktop</li>
+      <li>✅ 100% free, no signup</li>
+    </ul>
+
+    <h2>Who Needs a GST Calculator?</h2>
+    <p>Business owners, freelancers, accountants, students, and any consumer who wants to verify GST charges on their bills. It's especially useful for small business owners who need to quickly compute GST on invoices.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'gst');
+  renderRelatedLinks('gst');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

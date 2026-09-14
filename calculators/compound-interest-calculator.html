@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Compound Interest Calculator - Calculate CI with yearly, half-yearly, quarterly, monthly compounding.">
+<meta name="keywords" content="compound interest calculator, ci calculator, compound interest formula">
+<title>Compound Interest Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compound Interest Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate compound interest with yearly, quarterly, or monthly compounding.">
+<meta property="og:url" content="https://mycalculate.in/calculators/compound-interest-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Compound Interest Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate compound interest instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator","url":"https://mycalculate.in/calculators/compound-interest-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate compound interest with any compounding frequency.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Compound Interest Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is Compound Interest?</h2>
+    <p>Compound Interest (CI) is interest calculated on both the principal AND accumulated interest. Albert Einstein reportedly called it "the eighth wonder of the world". Over long periods, compounding can grow your money exponentially.</p>
+
+    <h2>Compound Interest Formula</h2>
+    <p><em>A = P × (1 + R/N)^(N×T)</em></p>
+    <p>Where: <strong>P</strong> = Principal, <strong>R</strong> = Annual rate (decimal), <strong>N</strong> = Compounding frequency per year, <strong>T</strong> = Time in years.</p>
+    <p><strong>CI = A − P</strong></p>
+
+    <h2>Compounding Frequency Matters</h2>
+    <p>More frequent compounding = more interest. Example: ₹10,000 at 7.5% for 3 years:</p>
+    <ul>
+      <li><strong>Yearly:</strong> ₹12,423</li>
+      <li><strong>Half-Yearly:</strong> ₹12,459</li>
+      <li><strong>Quarterly:</strong> ₹12,478</li>
+      <li><strong>Monthly:</strong> ₹12,491</li>
+    </ul>
+
+    <h2>Power of Compounding</h2>
+    <p>Time is the most important factor. ₹1 lakh at 12% becomes:</p>
+    <ul>
+      <li>10 years: ₹3.1 lakh</li>
+      <li>20 years: ₹9.6 lakh</li>
+      <li>30 years: ₹29.9 lakh</li>
+    </ul>
+    <p>Notice how the growth accelerates in later years — that's compounding in action.</p>
+
+    <h2>Where Compound Interest Applies</h2>
+    <ul>
+      <li>Mutual funds and SIPs</li>
+      <li>Fixed Deposits (FD)</li>
+      <li>Recurring Deposits (RD)</li>
+      <li>PPF, NPS, EPF</li>
+      <li>Stock market returns</li>
+      <li>Credit card debt (works against you!)</li>
+    </ul>
+
+    <h2>Why Use Our Compound Interest Calculator?</h2>
+    <p>Our calculator supports all compounding frequencies — yearly, half-yearly, quarterly, and monthly — so you get accurate results for any investment scenario.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'compoundInterest');
+  renderRelatedLinks('compoundInterest');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

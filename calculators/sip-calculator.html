@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free SIP Calculator - Calculate mutual fund SIP returns instantly. See estimated returns, invested amount, and total value.">
+<meta name="keywords" content="sip calculator, mutual fund sip, sip returns, sip investment calculator">
+<title>SIP Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SIP Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate mutual fund SIP returns instantly. See total value and estimated returns.">
+<meta property="og:url" content="https://mycalculate.in/calculators/sip-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SIP Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate mutual fund SIP returns instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"SIP Calculator","url":"https://mycalculate.in/calculators/sip-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate mutual fund SIP returns and total value.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › SIP Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is SIP?</h2>
+    <p>SIP (Systematic Investment Plan) is a method of investing a fixed amount in mutual funds at regular intervals — usually monthly. It's one of the most disciplined ways to build wealth over time because it averages out market volatility through rupee-cost averaging.</p>
+
+    <h2>How Does SIP Work?</h2>
+    <p>When you start a SIP, a fixed amount is auto-debited from your bank account on a chosen date every month and invested in your selected mutual fund. You get units based on the NAV (Net Asset Value) of that day. Over time, your money grows through compounding.</p>
+
+    <h2>SIP Formula</h2>
+    <p>The future value of a SIP is calculated as: <em>FV = P × ((1+i)^n − 1) ÷ i × (1+i)</em></p>
+    <p>Where: <strong>P</strong> = Monthly investment, <strong>i</strong> = Monthly rate of return, <strong>n</strong> = Number of monthly installments.</p>
+
+    <h2>Example: ₹5,000/month for 10 years at 12%</h2>
+    <ul>
+      <li>Total invested = ₹5,000 × 120 = ₹6,00,000</li>
+      <li>Estimated returns = ₹5,61,695</li>
+      <li>Total value = <strong>₹11,61,695</strong></li>
+    </ul>
+    <p>Notice how your money more than doubles — that's the power of compounding.</p>
+
+    <h2>Benefits of SIP</h2>
+    <ul>
+      <li>✅ Disciplined investing — no need to time the market</li>
+      <li>✅ Rupee cost averaging — buys more units when markets fall</li>
+      <li>✅ Start with as low as ₹500/month</li>
+      <li>✅ Flexible — increase, decrease, or pause anytime</li>
+      <li>✅ Power of compounding works best over 10+ years</li>
+    </ul>
+
+    <h2>Why Use Our SIP Calculator?</h2>
+    <p>Our free SIP calculator shows you exactly how much your monthly investment will grow over your chosen period. Adjust the amount, expected return, and duration to plan your financial goals — whether it's retirement, a house, or your child's education.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'sip');
+  renderRelatedLinks('sip');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

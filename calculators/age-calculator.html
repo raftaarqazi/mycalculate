@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Age Calculator - Calculate your exact age in years, months, days from date of birth. Instant & accurate.">
+<meta name="keywords" content="age calculator, calculate age, date of birth calculator">
+<title>Age Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Age Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate your exact age in years, months, and days instantly.">
+<meta property="og:url" content="https://mycalculate.in/calculators/age-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Age Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate your exact age instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Age Calculator","url":"https://mycalculate.in/calculators/age-calculator.html","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Calculate exact age in years, months, and days from date of birth.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <h1><a href="/">MyCalculate.in</a></h1>
+  <p>Free Online Calculators</p>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Age Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is an Age Calculator?</h2>
+    <p>An age calculator tells you your exact age in years, months, and days from your date of birth to today (or any other date). While simple age is just years, an accurate age calculation considers leap years, month lengths, and exact days.</p>
+
+    <h2>How Age is Calculated</h2>
+    <p>Age calculation involves subtracting your date of birth from the current date. The tricky part is handling different month lengths and leap years:</p>
+    <ul>
+      <li>If today's day is less than your birth day, borrow one month and add 30 days</li>
+      <li>If today's month is less than your birth month, borrow one year and add 12 months</li>
+      <li>Total days are calculated by dividing the difference in milliseconds by 86,400,000</li>
+    </ul>
+
+    <h2>Common Uses of Age Calculator</h2>
+    <ul>
+      <li><strong>Government forms</strong> — Exact age in years, months, days required for many applications</li>
+      <li><strong>School admission</strong> — Age criteria often needs exact calculation</li>
+      <li><strong>Retirement planning</strong> — Know exactly when you'll hit retirement age</li>
+      <li><strong>Job applications</strong> — Age proof for eligibility</li>
+      <li><strong>Medical purposes</strong> — Pediatric dosage often depends on exact age</li>
+      <li><strong>Just curiosity</strong> — Know how many days you've lived!</li>
+    </ul>
+
+    <h2>Age in Different Units</h2>
+    <p>Our calculator shows your age in:</p>
+    <ul>
+      <li><strong>Years, months, days</strong> — Standard format used in most forms</li>
+      <li><strong>Total months</strong> — Useful for baby's age in early months</li>
+      <li><strong>Total days</strong> — Fun to know how many days you've lived</li>
+    </ul>
+
+    <h2>Why Use Our Age Calculator?</h2>
+    <p>Our free age calculator gives you precise results in multiple formats instantly. No signup, no ads clutter, works on all devices. Perfect for filling forms, checking eligibility, or just satisfying your curiosity.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'age');
+  renderRelatedLinks('age');
+</script>
+
+<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>
