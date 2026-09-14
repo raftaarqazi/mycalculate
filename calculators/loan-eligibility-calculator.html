@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Loan Eligibility Calculator - Check how much home loan you can get based on income and existing EMIs.">
+<meta name="keywords" content="loan eligibility calculator, home loan eligibility, how much loan can i get">
+<title>Loan Eligibility Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loan Eligibility Calculator - Free Online Tool">
+<meta property="og:description" content="Check how much loan you can get based on income and existing EMIs.">
+<meta property="og:url" content="https://mycalculate.in/calculators/loan-eligibility-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Loan Eligibility Calculator - Free Online Tool">
+<meta name="twitter:description" content="Check loan eligibility instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Loan Eligibility Calculator","url":"https://mycalculate.in/calculators/loan-eligibility-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Check loan eligibility based on income and existing EMIs.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Loan Eligibility Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is Loan Eligibility?</h2>
+    <p>Loan eligibility is the maximum amount a bank is willing to lend you, based on your income, existing obligations, credit score, age, and other factors. Banks typically allow EMIs up to 50% of your monthly income.</p>
+
+    <h2>Key Factors That Determine Eligibility</h2>
+    <ul>
+      <li><strong>Monthly Income:</strong> Higher income = higher eligibility</li>
+      <li><strong>Existing EMIs:</strong> Other loans reduce eligibility</li>
+      <li><strong>Credit Score:</strong> 750+ gives best terms</li>
+      <li><strong>Age:</strong> Younger borrowers get longer tenures</li>
+      <li><strong>Employment Type:</strong> Salaried usually get better rates</li>
+      <li><strong>Property Value:</strong> Banks fund up to 80-90% of property value</li>
+    </ul>
+
+    <h2>How Eligibility is Calculated</h2>
+    <p>Banks use FOIR (Fixed Obligation to Income Ratio):</p>
+    <ol>
+      <li>Maximum EMI allowed = 50% of monthly income</li>
+      <li>Subtract existing EMIs from this</li>
+      <li>Remaining amount is available for new EMI</li>
+      <li>Calculate loan amount from this EMI, tenure, and rate</li>
+    </ol>
+
+    <h2>Example Calculation</h2>
+    <p>Income: ₹50,000/month, Existing EMI: ₹0, Rate: 8.5%, Tenure: 20 years:</p>
+    <ul>
+      <li>Max EMI = 50% × 50,000 = ₹25,000</li>
+      <li>Eligible loan ≈ <strong>₹29,00,000</strong></li>
+    </ul>
+
+    <h2>How to Increase Eligibility</h2>
+    <ul>
+      <li>Add a co-applicant (spouse, parent) with income</li>
+      <li>Close existing loans before applying</li>
+      <li>Improve credit score to 750+</li>
+      <li>Opt for longer tenure (reduces EMI, increases eligibility)</li>
+      <li>Declare all sources of income (rental, freelance, etc.)</li>
+    </ul>
+
+    <h2>Why Use Our Loan Eligibility Calculator?</h2>
+    <p>Know your loan eligibility before approaching banks. Plan your property budget realistically.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'homeLoanEligibility');
+  renderRelatedLinks('homeLoanEligibility');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

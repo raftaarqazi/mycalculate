@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Personal Loan EMI Calculator - Calculate monthly EMI, total interest instantly. Any bank, any amount.">
+<meta name="keywords" content="personal loan calculator, personal loan emi, personal loan interest">
+<title>Personal Loan EMI Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Personal Loan EMI Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate personal loan EMI instantly. See total interest.">
+<meta property="og:url" content="https://mycalculate.in/calculators/personal-loan-emi-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Personal Loan EMI Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate personal loan EMI instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Personal Loan EMI Calculator","url":"https://mycalculate.in/calculators/personal-loan-emi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate personal loan EMI and total interest.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Personal Loan EMI Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is a Personal Loan?</h2>
+    <p>A personal loan is an unsecured loan — no collateral required. Banks offer it based on your income and credit score. Interest rates are higher than secured loans because there's no asset backing.</p>
+
+    <h2>Personal Loan Highlights</h2>
+    <ul>
+      <li><strong>Loan Amount:</strong> ₹50,000 to ₹50 lakh</li>
+      <li><strong>Tenure:</strong> 1 to 5 years (some up to 7)</li>
+      <li><strong>Interest Rate:</strong> 10.5% to 24%</li>
+      <li><strong>Processing Fee:</strong> 1-3% of loan</li>
+      <li><strong>Disbursement:</strong> Usually within 24-72 hours</li>
+    </ul>
+
+    <h2>Example: ₹2,00,000 at 14% for 2 years</h2>
+    <ul>
+      <li>Monthly EMI: ~₹9,600</li>
+      <li>Total interest: ~₹30,400</li>
+      <li>Total payment: ~₹2,30,400</li>
+    </ul>
+
+    <h2>When to Take a Personal Loan</h2>
+    <ul>
+      <li>Medical emergency</li>
+      <li>Wedding expenses</li>
+      <li>Home renovation</li>
+      <li>Travel</li>
+      <li>Debt consolidation</li>
+      <li>Education (if education loan is not an option)</li>
+    </ul>
+
+    <h2>When to Avoid Personal Loan</h2>
+    <ul>
+      <li>For luxury purchases or gadgets</li>
+      <li>For investing in stocks or mutual funds</li>
+      <li>If you can't afford the EMI</li>
+      <li>For gambling or speculative activities</li>
+    </ul>
+
+    <h2>Tips to Get Best Personal Loan</h2>
+    <ul>
+      <li>Maintain credit score of 750+</li>
+      <li>Compare offers across banks and NBFCs</li>
+      <li>Negotiate on interest rate and processing fee</li>
+      <li>Choose shorter tenure if EMI is affordable</li>
+      <li>Prepay when you have surplus cash</li>
+    </ul>
+
+    <h2>Why Use Our Personal Loan EMI Calculator?</h2>
+    <p>Plan your personal loan with clear EMI numbers. Compare offers and choose the best.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'personalLoan');
+  renderRelatedLinks('personalLoan');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

@@ -483,7 +483,7 @@ function renderCalc(elId, calcKey) {
   const el = document.getElementById(elId);
   if (!el) return;
 
-  let html = `<h2>${calc.name}</h2>`;
+  let html = `<h1 class="page-title">${calc.name}</h1>`;
   calc.fields.forEach(f => {
     html += `<div class="field"><label>${f.l}</label>`;
     if (f.t === 'select') {

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Car Loan EMI Calculator - Calculate monthly EMI for your car loan instantly. See total interest.">
+<meta name="keywords" content="car loan calculator, car emi calculator, car loan emi">
+<title>Car Loan EMI Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Car Loan EMI Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate monthly EMI for your car loan instantly.">
+<meta property="og:url" content="https://mycalculate.in/calculators/car-loan-emi-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Car Loan EMI Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate car loan EMI instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Car Loan EMI Calculator","url":"https://mycalculate.in/calculators/car-loan-emi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate car loan EMI and total interest.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Car Loan EMI Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>Car Loan in India</h2>
+    <p>A car loan is a secured loan where the vehicle is pledged as collateral. Banks and NBFCs offer up to 90% of the car's on-road price with tenures of 1 to 7 years. Interest rates typically range from 8.5% to 14% depending on your credit profile.</p>
+
+    <h2>Car Loan EMI Formula</h2>
+    <p><em>EMI = P × R × (1+R)^N ÷ ((1+R)^N − 1)</em></p>
+    <p>Where P = loan amount, R = monthly interest rate, N = number of months.</p>
+
+    <h2>Example: ₹8,00,000 at 9.5% for 5 years</h2>
+    <ul>
+      <li>Monthly EMI: ~₹16,800</li>
+      <li>Total interest: ~₹2,08,000</li>
+      <li>Total payment: ~₹10,08,000</li>
+    </ul>
+
+    <h2>Factors Affecting Car Loan EMI</h2>
+    <ul>
+      <li><strong>Down Payment:</strong> Higher down payment = lower EMI</li>
+      <li><strong>Interest Rate:</strong> Compare across banks</li>
+      <li><strong>Tenure:</strong> Longer = lower EMI but more total interest</li>
+      <li><strong>Credit Score:</strong> 750+ gets best rates</li>
+      <li><strong>New vs Used Car:</strong> New cars get lower rates</li>
+    </ul>
+
+    <h2>Tips to Reduce Car Loan Cost</h2>
+    <ul>
+      <li>Save for a bigger down payment (at least 20%)</li>
+      <li>Negotiate on the interest rate — even 0.5% saves thousands</li>
+      <li>Choose shorter tenure if affordable</li>
+      <li>Make prepayments whenever possible</li>
+      <li>Compare offers from banks and NBFCs</li>
+    </ul>
+
+    <h2>Documents Required</h2>
+    <ul>
+      <li>Identity proof (Aadhaar, PAN)</li>
+      <li>Address proof</li>
+      <li>Income proof (salary slips, ITR)</li>
+      <li>Bank statements (6 months)</li>
+      <li>Passport size photos</li>
+      <li>Car quotation</li>
+    </ul>
+
+    <h2>Why Use Our Car Loan EMI Calculator?</h2>
+    <p>Get accurate EMI, total interest, and payment amounts instantly. Compare loan offers before deciding.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'carLoan');
+  renderRelatedLinks('carLoan');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

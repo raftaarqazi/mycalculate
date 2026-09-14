@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free NPS Calculator - Calculate National Pension Scheme corpus and monthly pension after retirement.">
+<meta name="keywords" content="nps calculator, national pension scheme, nps corpus, nps pension">
+<title>NPS Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NPS Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate NPS corpus and monthly pension after retirement.">
+<meta property="og:url" content="https://mycalculate.in/calculators/nps-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NPS Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate NPS corpus instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"NPS Calculator","url":"https://mycalculate.in/calculators/nps-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate National Pension Scheme (NPS) corpus and pension.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › NPS Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is NPS?</h2>
+    <p>NPS (National Pension Scheme) is a government-sponsored retirement savings scheme. It allows you to invest regularly during your working years and receive a pension after retirement. NPS is regulated by PFRDA.</p>
+
+    <h2>NPS Key Features</h2>
+    <ul>
+      <li><strong>Entry Age:</strong> 18 to 70 years</li>
+      <li><strong>Minimum Contribution:</strong> ₹500/month or ₹1,000/year</li>
+      <li><strong>Lock-in:</strong> Until age 60</li>
+      <li><strong>Tax Benefit:</strong> Additional ₹50,000 deduction under 80CCD(1B)</li>
+      <li><strong>Returns:</strong> Market-linked (depends on fund choice)</li>
+    </ul>
+
+    <h2>NPS Investment Options</h2>
+    <ul>
+      <li><strong>Equity (E):</strong> Up to 75%, highest returns</li>
+      <li><strong>Corporate Bonds (C):</strong> Medium risk</li>
+      <li><strong>Government Securities (G):</strong> Low risk</li>
+      <li><strong>Alternative Assets (A):</strong> Real estate, REITs</li>
+    </ul>
+
+    <h2>At Retirement (Age 60)</h2>
+    <ul>
+      <li>Minimum 40% must be used to buy annuity (monthly pension)</li>
+      <li>Up to 60% can be withdrawn tax-free as lump sum</li>
+      <li>Annuity income is taxable as per slab</li>
+    </ul>
+
+    <h2>Example: ₹5,000/month for 25 years at 10%</h2>
+    <ul>
+      <li>Total invested: ₹15,00,000</li>
+      <li>Estimated corpus: ~₹66,00,000</li>
+      <li>Lump sum (60%): ₹39,60,000</li>
+      <li>Annuity (40%): ₹26,40,000</li>
+    </ul>
+
+    <h2>Why Use Our NPS Calculator?</h2>
+    <p>See your projected retirement corpus and monthly pension. Plan your retirement with realistic numbers.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'nps');
+  renderRelatedLinks('nps');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

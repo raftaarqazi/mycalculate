@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Gratuity Calculator - Calculate gratuity amount payable after 5+ years of service. Formula & example.">
+<meta name="keywords" content="gratuity calculator, gratuity amount, payment of gratuity act">
+<title>Gratuity Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gratuity Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate gratuity amount payable after 5+ years of service.">
+<meta property="og:url" content="https://mycalculate.in/calculators/gratuity-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gratuity Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate your gratuity amount instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Gratuity Calculator","url":"https://mycalculate.in/calculators/gratuity-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate gratuity amount under Payment of Gratuity Act, 1972.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Gratuity Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is Gratuity?</h2>
+    <p>Gratuity is a lump sum payment made by an employer to an employee as a token of appreciation for their long service. It's governed by the Payment of Gratuity Act, 1972, and applies to establishments with 10 or more employees.</p>
+
+    <h2>Eligibility for Gratuity</h2>
+    <ul>
+      <li>Minimum <strong>5 years</strong> of continuous service</li>
+      <li>Applicable on retirement, resignation, superannuation, or death</li>
+      <li>5 years not required in case of death or disability</li>
+    </ul>
+
+    <h2>Gratuity Formula</h2>
+    <p><em>Gratuity = (15 × Last Drawn Salary × Years of Service) ÷ 26</em></p>
+    <p>Where "Last Drawn Salary" = Basic + Dearness Allowance (DA).</p>
+
+    <h2>Example Calculation</h2>
+    <p>Salary = ₹50,000/month, Service = 10 years:</p>
+    <ul>
+      <li>Gratuity = (15 × 50,000 × 10) ÷ 26 = <strong>₹2,88,462</strong></li>
+    </ul>
+
+    <h2>Gratuity Tax Rules</h2>
+    <ul>
+      <li>Exempt up to ₹20 lakh for private sector employees</li>
+      <li>Government employees: fully exempt</li>
+      <li>Amount above ₹20 lakh is taxable as per income tax slab</li>
+    </ul>
+
+    <h2>Points to Note</h2>
+    <ul>
+      <li>Service of more than 6 months in a year counts as 1 full year</li>
+      <li>Employer must pay within 30 days of it becoming due</li>
+      <li>If delayed, employer pays interest</li>
+      <li>Gratuity is not paid if terminated for misconduct</li>
+    </ul>
+
+    <h2>Why Use Our Gratuity Calculator?</h2>
+    <p>Calculate your exact gratuity amount before leaving a job. Plan your finances with accurate numbers.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'gratuity');
+  renderRelatedLinks('gratuity');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

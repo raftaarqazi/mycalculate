@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free CAGR Calculator - Calculate Compound Annual Growth Rate of your investments. Compare returns accurately.">
+<meta name="keywords" content="cagr calculator, compound annual growth rate, investment growth">
+<title>CAGR Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CAGR Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate Compound Annual Growth Rate of your investments.">
+<meta property="og:url" content="https://mycalculate.in/calculators/cagr-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CAGR Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate CAGR instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CAGR Calculator","url":"https://mycalculate.in/calculators/cagr-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate Compound Annual Growth Rate (CAGR) of investments.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › CAGR Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is CAGR?</h2>
+    <p>CAGR (Compound Annual Growth Rate) is the average annual growth rate of an investment over a specific period, assuming it grew at a steady rate. It smooths out volatility to give a single number that represents the investment's performance.</p>
+
+    <h2>CAGR Formula</h2>
+    <p><em>CAGR = (Ending Value ÷ Beginning Value)^(1/Years) − 1</em></p>
+    <p>Result is multiplied by 100 to get percentage.</p>
+
+    <h2>Example Calculation</h2>
+    <p>Investment grew from ₹1,00,000 to ₹2,50,000 in 5 years:</p>
+    <ul>
+      <li>CAGR = (2,50,000 ÷ 1,00,000)^(1/5) − 1 = 20.11%</li>
+      <li>Absolute return = 150%</li>
+    </ul>
+    <p>Notice the difference — absolute return says 150%, but the actual annualized return is only ~20%.</p>
+
+    <h2>Why CAGR Matters</h2>
+    <p>Absolute return can be misleading. If someone says "my investment doubled", you don't know if it took 2 years or 20 years. CAGR tells you the annualized growth rate, making comparisons fair across different investments.</p>
+
+    <h2>CAGR Use Cases</h2>
+    <ul>
+      <li>Compare mutual funds returns</li>
+      <li>Evaluate stock performance</li>
+      <li>Track business revenue growth</li>
+      <li>Measure portfolio performance</li>
+      <li>Compare against benchmark indices</li>
+    </ul>
+
+    <h2>Limitations of CAGR</h2>
+    <ul>
+      <li>Assumes steady growth — ignores volatility</li>
+      <li>Doesn't reflect interim gains or losses</li>
+      <li>Not suitable for SIP-based investments (use XIRR instead)</li>
+    </ul>
+
+    <h2>Why Use Our CAGR Calculator?</h2>
+    <p>Get instant CAGR with absolute return for comparison. Perfect for evaluating mutual funds, stocks, or any investment over time.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'cagr');
+  renderRelatedLinks('cagr');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

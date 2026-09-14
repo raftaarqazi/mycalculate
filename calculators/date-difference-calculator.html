@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Date Difference Calculator - Calculate days, weeks, months between two dates. Perfect for event planning.">
+<meta name="keywords" content="date difference calculator, days between dates, date calculator">
+<title>Date Difference Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Date Difference Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate days, weeks, months between two dates.">
+<meta property="og:url" content="https://mycalculate.in/calculators/date-difference-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Date Difference Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate date difference instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Date Difference Calculator","url":"https://mycalculate.in/calculators/date-difference-calculator.html","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Calculate days, weeks, and months between two dates.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Date Difference Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is a Date Difference Calculator?</h2>
+    <p>A date difference calculator tells you the exact number of days, weeks, and months between two dates. It's useful for planning events, tracking projects, calculating age, or counting down to special occasions.</p>
+
+    <h2>Where It's Useful</h2>
+    <ul>
+      <li><strong>Event planning:</strong> Days until wedding, birthday, exam</li>
+      <li><strong>Project management:</strong> Timeline tracking</li>
+      <li><strong>Pregnancy:</strong> Track weeks of pregnancy</li>
+      <li><strong>Legal:</strong> Contract durations, notice periods</li>
+      <li><strong>Financial:</strong> Loan tenure, investment periods</li>
+      <li><strong>Personal:</strong> Days until vacation, retirement</li>
+    </ul>
+
+    <h2>How Date Difference is Calculated</h2>
+    <p>The difference is calculated by converting both dates to milliseconds (Unix time) and taking the absolute difference:</p>
+    <p><em>Days = |Date2 − Date1| ÷ (1000 × 60 × 60 × 24)</em></p>
+    <p>Weeks = Days ÷ 7. Months = Days ÷ 30.44 (average month length).</p>
+
+    <h2>Example</h2>
+    <p>From 1 January 2026 to 15 March 2026:</p>
+    <ul>
+      <li>Days: 73</li>
+      <li>Weeks: 10.4</li>
+      <li>Months: 2.4</li>
+    </ul>
+
+    <h2>Leap Years Considered</h2>
+    <p>Our calculator automatically accounts for leap years (2024, 2028, 2032, etc.), ensuring accurate day counts even over long periods.</p>
+
+    <h2>Why Use Our Date Calculator?</h2>
+    <p>Get instant date difference for any two dates. Perfect for planning, tracking, and organizing.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'dateDiff');
+  renderRelatedLinks('dateDiff');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

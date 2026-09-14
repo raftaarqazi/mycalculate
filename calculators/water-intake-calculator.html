@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Water Intake Calculator - Calculate how much water you should drink daily based on weight and activity.">
+<meta name="keywords" content="water intake calculator, daily water intake, how much water should i drink">
+<title>Water Intake Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Water Intake Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate how much water you should drink daily.">
+<meta property="og:url" content="https://mycalculate.in/calculators/water-intake-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Water Intake Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate your daily water intake.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Water Intake Calculator","url":"https://mycalculate.in/calculators/water-intake-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"Calculate daily water intake based on weight and activity.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Water Intake Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>Why Water Intake Matters</h2>
+    <p>Water makes up 60% of your body. It's essential for digestion, circulation, temperature regulation, joint lubrication, and removing waste. Even mild dehydration (1-2%) affects energy, mood, and cognitive performance.</p>
+
+    <h2>How Much Water Do You Need?</h2>
+    <p>The general recommendation is <strong>8 glasses (2 liters)</strong> per day. But this varies based on:</p>
+    <ul>
+      <li>Body weight</li>
+      <li>Physical activity</li>
+      <li>Climate (hot weather = more water)</li>
+      <li>Health conditions (pregnancy, illness)</li>
+      <li>Diet (caffeine, salt, protein intake)</li>
+    </ul>
+
+    <h2>Precise Formula</h2>
+    <p><em>Daily Water (liters) = Weight (kg) × 0.033</em></p>
+    <p>Plus extra for exercise: 350-500 ml per 30 minutes of activity.</p>
+
+    <h2>Example</h2>
+    <p>70 kg person, 30 min exercise:</p>
+    <ul>
+      <li>Base = 70 × 0.033 = 2.31 L</li>
+      <li>Exercise = 0.35 L</li>
+      <li>Total = <strong>2.66 L/day (~10-11 glasses)</strong></li>
+    </ul>
+
+    <h2>Signs of Dehydration</h2>
+    <ul>
+      <li>Dark yellow urine</li>
+      <li>Dry mouth and lips</li>
+      <li>Fatigue and dizziness</li>
+      <li>Headache</li>
+      <li>Poor concentration</li>
+      <li>Constipation</li>
+    </ul>
+
+    <h2>Tips to Stay Hydrated</h2>
+    <ul>
+      <li>Carry a water bottle everywhere</li>
+      <li>Drink a glass after every meal</li>
+      <li>Set reminders on your phone</li>
+      <li>Add lemon or mint for taste</li>
+      <li>Eat water-rich foods (watermelon, cucumber, oranges)</li>
+    </ul>
+
+    <h2>Why Use Our Water Intake Calculator?</h2>
+    <p>Get a personalized daily water target based on your weight and activity. Stay healthy and hydrated.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'water');
+  renderRelatedLinks('water');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

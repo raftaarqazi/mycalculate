@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free BMI Calculator for Kids - Check your child's Body Mass Index. Note: consult doctor for full assessment.">
+<meta name="keywords" content="bmi calculator for kids, child bmi, kids bmi chart, children bmi">
+<title>BMI Calculator for Kids - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BMI Calculator for Kids - Free Online Tool">
+<meta property="og:description" content="Check your child's BMI. Consult a pediatrician for full assessment.">
+<meta property="og:url" content="https://mycalculate.in/calculators/bmi-kids-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BMI Calculator for Kids - Free Online Tool">
+<meta name="twitter:description" content="Check your child's BMI instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator for Kids","url":"https://mycalculate.in/calculators/bmi-kids-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"Calculate BMI for children. Consult pediatrician for interpretation.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › BMI Calculator for Kids
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>BMI for Children — Important Note</h2>
+    <p>BMI for children is calculated the same way as adults, but <strong>interpretation is completely different</strong>. Children's body composition changes rapidly with age and gender. A pediatrician must interpret BMI using age-and-gender-specific growth charts (percentiles).</p>
+
+    <h2>Why Adult BMI Categories Don't Apply to Kids</h2>
+    <p>An adult BMI of 18 is "normal" but for a 5-year-old, it may be "underweight". Children's BMI is compared against other children of the same age and gender using CDC or WHO growth charts.</p>
+
+    <h2>BMI Categories for Children (Percentile-Based)</h2>
+    <ul>
+      <li><strong>Below 5th percentile:</strong> Underweight</li>
+      <li><strong>5th to 85th percentile:</strong> Healthy weight</li>
+      <li><strong>85th to 95th percentile:</strong> Overweight</li>
+      <li><strong>Above 95th percentile:</strong> Obese</li>
+    </ul>
+
+    <h2>BMI Formula (Same as Adults)</h2>
+    <p><em>BMI = Weight (kg) ÷ Height (m)²</em></p>
+
+    <h2>What Affects a Child's BMI?</h2>
+    <ul>
+      <li>Age and gender</li>
+      <li>Growth spurts</li>
+      <li>Muscle mass (athletic kids may show higher BMI)</li>
+      <li>Genetic factors</li>
+      <li>Diet and physical activity</li>
+    </ul>
+
+    <h2>When to Consult a Pediatrician</h2>
+    <ul>
+      <li>BMI is below 5th percentile (underweight)</li>
+      <li>BMI is above 85th percentile (overweight)</li>
+      <li>Sudden weight gain or loss</li>
+      <li>Eating or activity concerns</li>
+      <li>Any persistent health issue</li>
+    </ul>
+
+    <h2>Healthy Habits for Kids</h2>
+    <ul>
+      <li>Balanced diet with fruits and vegetables</li>
+      <li>At least 60 minutes of physical activity daily</li>
+      <li>Limited screen time (max 2 hours/day)</li>
+      <li>8-11 hours of sleep depending on age</li>
+      <li>Regular health checkups</li>
+    </ul>
+
+    <h2>Why Use Our Calculator?</h2>
+    <p>Quick BMI number for your child. But remember — only a pediatrician can properly interpret it using growth charts. Always consult a doctor.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'bmiKids');
+  renderRelatedLinks('bmiKids');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

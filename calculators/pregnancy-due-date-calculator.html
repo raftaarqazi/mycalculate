@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Pregnancy Due Date Calculator - Find your baby's due date from last menstrual period. Track pregnancy weeks.">
+<meta name="keywords" content="pregnancy due date calculator, due date calculator, pregnancy calculator">
+<title>Pregnancy Due Date Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pregnancy Due Date Calculator - Free Online Tool">
+<meta property="og:description" content="Find your baby's due date from last menstrual period.">
+<meta property="og:url" content="https://mycalculate.in/calculators/pregnancy-due-date-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pregnancy Due Date Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate pregnancy due date instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pregnancy Due Date Calculator","url":"https://mycalculate.in/calculators/pregnancy-due-date-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"Calculate pregnancy due date from last menstrual period.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Pregnancy Due Date Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>How Pregnancy Due Date is Calculated</h2>
+    <p>Pregnancy due date is typically calculated using Naegele's Rule: <strong>First day of last menstrual period + 280 days (40 weeks)</strong>. This assumes a regular 28-day cycle.</p>
+
+    <h2>Trimesters</h2>
+    <ul>
+      <li><strong>First Trimester:</strong> Weeks 1-12 — organ development, morning sickness</li>
+      <li><strong>Second Trimester:</strong> Weeks 13-27 — baby grows, movements felt</li>
+      <li><strong>Third Trimester:</strong> Weeks 28-40 — final growth, preparation for birth</li>
+    </ul>
+
+    <h2>Pregnancy Milestones</h2>
+    <ul>
+      <li><strong>Week 5:</strong> Heartbeat detectable</li>
+      <li><strong>Week 12:</strong> First trimester screening</li>
+      <li><strong>Week 20:</strong> Anatomy scan, gender can be determined</li>
+      <li><strong>Week 24:</strong> Viability milestone</li>
+      <li><strong>Week 37:</strong> Full-term begins</li>
+      <li><strong>Week 40:</strong> Due date</li>
+    </ul>
+
+    <h2>How Accurate is the Due Date?</h2>
+    <p>Only about <strong>5% of babies</strong> are born on their exact due date. Most births occur between weeks 38-42. An early ultrasound (before week 12) is the most accurate method to determine due date.</p>
+
+    <h2>Factors That Affect Due Date</h2>
+    <ul>
+      <li>Cycle length (longer cycles = later due date)</li>
+      <li>Irregular periods</li>
+      <li>Multiple pregnancy (twins usually delivered earlier)</li>
+      <li>Mother's age and health</li>
+      <li>Previous pregnancy history</li>
+    </ul>
+
+    <h2>Important Note</h2>
+    <p>This calculator gives an estimate. Always follow your OB-GYN's advice for accurate dating, prenatal care, and monitoring. Regular checkups are essential for a healthy pregnancy.</p>
+
+    <h2>Why Use Our Calculator?</h2>
+    <p>Get a quick estimate of your due date and current pregnancy week. Track your journey with confidence.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'pregnancy');
+  renderRelatedLinks('pregnancy');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

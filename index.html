@@ -3,55 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="15+ Free online calculators for GST, EMI, SIP, BMI, Age, Percentage, Loan, Interest and more. Fast, accurate, mobile-friendly.">
-<meta name="keywords" content="gst calculator, emi calculator, sip calculator, bmi calculator, percentage calculator, age calculator, fd calculator, home loan emi">
-<title>MyCalculate - 15+ Free Online Calculators | GST, EMI, SIP, BMI</title>
-
-<!-- Favicon -->
+<meta name="description" content="30+ Free online calculators for GST, EMI, SIP, BMI, Age, Tax, Loan, Investment and more. Fast, accurate, mobile-friendly.">
+<meta name="keywords" content="gst calculator, emi calculator, sip calculator, bmi calculator, income tax calculator, fd calculator, ppf calculator, hra calculator">
+<title>MyCalculate - 30+ Free Online Calculators | GST, EMI, SIP, Tax</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="MyCalculate - 15+ Free Online Calculators">
-<meta property="og:description" content="Free online calculators for GST, EMI, SIP, BMI, Age, Percentage and more. Fast, accurate, mobile-friendly.">
+<meta property="og:title" content="MyCalculate - 30+ Free Online Calculators">
+<meta property="og:description" content="Free online calculators for GST, EMI, SIP, BMI, Age, Percentage, Tax and more.">
 <meta property="og:url" content="https://mycalculate.in/">
 <meta property="og:site_name" content="MyCalculate.in">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyCalculate - 15+ Free Online Calculators">
+<meta name="twitter:title" content="MyCalculate - 30+ Free Online Calculators">
 <meta name="twitter:description" content="Free online calculators for GST, EMI, SIP, BMI, Age, Percentage and more.">
-
-<!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "MyCalculate.in",
-  "url": "https://mycalculate.in/",
-  "description": "Free online calculators for GST, EMI, SIP, BMI, Age, Percentage, and more."
-}
+{"@context":"https://schema.org","@type":"WebSite","name":"MyCalculate.in","url":"https://mycalculate.in/","description":"Free online calculators for GST, EMI, SIP, BMI, Age, Percentage, and more."}
 </script>
-
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header>
-  <h1><a href="/">MyCalculate.in</a></h1>
-  <p>15+ Free Online Calculators — Fast, Accurate, Easy</p>
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-  <div class="tabs" id="tabs"></div>
-  <div id="calcContainer"></div>
+<section class="hero">
+  <h1>30+ Free Online Calculators</h1>
+  <p>Fast, accurate, and easy to use — for finance, health, and everyday needs</p>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="search" id="searchInput" class="search-input" placeholder="Search calculator... (GST, EMI, SIP, BMI)">
+  </div>
+</section>
 
-  <section class="info-section">
-    <div class="info-card">
-      <h3>Why MyCalculate?</h3>
+<div class="container" id="calculators">
+
+  <div class="calc-category">
+    <h2>💰 Finance Calculators</h2>
+    <div class="calc-grid" id="financeGrid">
+      <a href="/calculators/gst-calculator.html" class="calc-card" data-name="gst calculator">
+        <span class="icon">🧾</span>
+        <h3>GST Calculator</h3>
+        <p>Add or remove GST at 5%, 12%, 18%, 28%</p>
+      </a>
+      <a href="/calculators/emi-calculator.html" class="calc-card" data-name="emi calculator loan">
+        <span class="icon">🏠</span>
+        <h3>EMI Calculator</h3>
+        <p>Monthly EMI for home, car, personal loans</p>
+      </a>
+      <a href="/calculators/sip-calculator.html" class="calc-card" data-name="sip calculator mutual fund">
+        <span class="icon">📈</span>
+        <h3>SIP Calculator</h3>
+        <p>Mutual fund SIP returns and total value</p>
+      </a>
+      <a href="/calculators/fd-calculator.html" class="calc-card" data-name="fd calculator fixed deposit">
+        <span class="icon">🏦</span>
+        <h3>FD Calculator</h3>
+        <p>Fixed Deposit maturity and interest earned</p>
+      </a>
+      <a href="/calculators/ppf-calculator.html" class="calc-card" data-name="ppf calculator">
+        <span class="icon">💼</span>
+        <h3>PPF Calculator</h3>
+        <p>15-year PPF maturity with tax-free returns</p>
+      </a>
+      <a href="/calculators/hra-calculator.html" class="calc-card" data-name="hra calculator exemption">
+        <span class="icon">🏡</span>
+        <h3>HRA Calculator</h3>
+        <p>HRA tax exemption for salaried employees</p>
+      </a>
+      <a href="/calculators/income-tax-calculator.html" class="calc-card" data-name="income tax calculator">
+        <span class="icon">📊</span>
+        <h3>Income Tax</h3>
+        <p>Compare Old vs New Tax Regime</p>
+      </a>
+      <a href="/calculators/salary-calculator.html" class="calc-card" data-name="salary calculator take home ctc">
+        <span class="icon">💵</span>
+        <h3>Salary Calculator</h3>
+        <p>Take-home salary from CTC with PF & tax</p>
+      </a>
+      <a href="/calculators/simple-interest-calculator.html" class="calc-card" data-name="simple interest calculator">
+        <span class="icon">💹</span>
+        <h3>Simple Interest</h3>
+        <p>SI on loans and investments</p>
+      </a>
+      <a href="/calculators/compound-interest-calculator.html" class="calc-card" data-name="compound interest calculator">
+        <span class="icon">📉</span>
+        <h3>Compound Interest</h3>
+        <p>CI with yearly, quarterly, monthly compounding</p>
+      </a>
+      <a href="/calculators/nps-calculator.html" class="calc-card" data-name="nps calculator pension">
+        <span class="icon">🎯</span>
+        <h3>NPS Calculator</h3>
+        <p>National Pension Scheme corpus & pension</p>
+      </a>
+      <a href="/calculators/lumpsum-calculator.html" class="calc-card" data-name="lumpsum calculator">
+        <span class="icon">💎</span>
+        <h3>Lumpsum Calculator</h3>
+        <p>One-time mutual fund investment returns</p>
+      </a>
+      <a href="/calculators/cagr-calculator.html" class="calc-card" data-name="cagr calculator growth">
+        <span class="icon">📐</span>
+        <h3>CAGR Calculator</h3>
+        <p>Compound Annual Growth Rate of investments</p>
+      </a>
+      <a href="/calculators/gratuity-calculator.html" class="calc-card" data-name="gratuity calculator">
+        <span class="icon">🎁</span>
+        <h3>Gratuity Calculator</h3>
+        <p>Gratuity payable after 5+ years service</p>
+      </a>
+      <a href="/calculators/loan-eligibility-calculator.html" class="calc-card" data-name="loan eligibility calculator">
+        <span class="icon">✅</span>
+        <h3>Loan Eligibility</h3>
+        <p>How much loan you can get from your income</p>
+      </a>
+      <a href="/calculators/car-loan-emi-calculator.html" class="calc-card" data-name="car loan emi calculator">
+        <span class="icon">🚗</span>
+        <h3>Car Loan EMI</h3>
+        <p>Monthly EMI for car loans</p>
+      </a>
+      <a href="/calculators/personal-loan-emi-calculator.html" class="calc-card" data-name="personal loan emi calculator">
+        <span class="icon">💳</span>
+        <h3>Personal Loan EMI</h3>
+        <p>EMI for unsecured personal loans</p>
+      </a>
+      <a href="/calculators/discount-calculator.html" class="calc-card" data-name="discount calculator">
+        <span class="icon">🏷️</span>
+        <h3>Discount Calculator</h3>
+        <p>Final price after discount + savings</p>
+      </a>
+      <a href="/calculators/tip-calculator.html" class="calc-card" data-name="tip calculator bill split">
+        <span class="icon">🍽️</span>
+        <h3>Tip Calculator</h3>
+        <p>Tip amount and split bills between friends</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="calc-category">
+    <h2>❤️ Health Calculators</h2>
+    <div class="calc-grid" id="healthGrid">
+      <a href="/calculators/bmi-calculator.html" class="calc-card" data-name="bmi calculator body mass index">
+        <span class="icon">⚖️</span>
+        <h3>BMI Calculator</h3>
+        <p>Body Mass Index and weight category</p>
+      </a>
+      <a href="/calculators/bmi-kids-calculator.html" class="calc-card" data-name="bmi calculator kids children">
+        <span class="icon">👶</span>
+        <h3>BMI for Kids</h3>
+        <p>Body Mass Index for children</p>
+      </a>
+      <a href="/calculators/calorie-calculator.html" class="calc-card" data-name="calorie calculator bmr tdee">
+        <span class="icon">🔥</span>
+        <h3>Calorie Calculator</h3>
+        <p>BMR & daily calorie needs</p>
+      </a>
+      <a href="/calculators/water-intake-calculator.html" class="calc-card" data-name="water intake calculator">
+        <span class="icon">💧</span>
+        <h3>Water Intake</h3>
+        <p>Daily water requirement by weight</p>
+      </a>
+      <a href="/calculators/pregnancy-due-date-calculator.html" class="calc-card" data-name="pregnancy due date calculator">
+        <span class="icon">🤰</span>
+        <h3>Pregnancy Due Date</h3>
+        <p>Baby's due date from last period</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="calc-category">
+    <h2>🔵 Everyday Calculators</h2>
+    <div class="calc-grid" id="everydayGrid">
+      <a href="/calculators/age-calculator.html" class="calc-card" data-name="age calculator date of birth">
+        <span class="icon">🎂</span>
+        <h3>Age Calculator</h3>
+        <p>Exact age in years, months, and days</p>
+      </a>
+      <a href="/calculators/percentage-calculator.html" class="calc-card" data-name="percentage calculator">
+        <span class="icon">📊</span>
+        <h3>Percentage Calculator</h3>
+        <p>X% of Y and what % X is of Y</p>
+      </a>
+      <a href="/calculators/date-difference-calculator.html" class="calc-card" data-name="date difference calculator">
+        <span class="icon">📅</span>
+        <h3>Date Difference</h3>
+        <p>Days, weeks, months between two dates</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="calc-category">
+    <h2>🟣 Converters</h2>
+    <div class="calc-grid" id="converterGrid">
+      <a href="/calculators/unit-converter.html" class="calc-card" data-name="unit converter length weight">
+        <span class="icon">📏</span>
+        <h3>Unit Converter</h3>
+        <p>km to miles, kg to lb, °C to °F</p>
+      </a>
+      <a href="/calculators/currency-converter.html" class="calc-card" data-name="currency converter inr usd">
+        <span class="icon">💱</span>
+        <h3>Currency Converter</h3>
+        <p>INR, USD, EUR, GBP conversion</p>
+      </a>
+      <a href="/calculators/temperature-converter.html" class="calc-card" data-name="temperature converter celsius fahrenheit">
+        <span class="icon">🌡️</span>
+        <h3>Temperature Converter</h3>
+        <p>Celsius, Fahrenheit, Kelvin</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="calc-category">
+    <h2>💡 Why MyCalculate?</h2>
+    <div class="info-card" style="background:#fff;border-radius:12px;padding:1.2rem 1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.05)">
       <ul>
         <li>✅ 100% Free — No signup required</li>
         <li>✅ Works on Mobile & Desktop</li>
@@ -59,29 +234,8 @@
         <li>✅ No data stored on servers</li>
       </ul>
     </div>
+  </div>
 
-    <div class="info-card">
-      <h3>All Calculators</h3>
-      <p style="margin-bottom:.5rem">Click any calculator below to open its dedicated page with detailed guide:</p>
-      <div class="grid-cards">
-        <a href="/calculators/gst-calculator.html">GST Calculator</a>
-        <a href="/calculators/emi-calculator.html">EMI Calculator</a>
-        <a href="/calculators/sip-calculator.html">SIP Calculator</a>
-        <a href="/calculators/percentage-calculator.html">Percentage Calculator</a>
-        <a href="/calculators/age-calculator.html">Age Calculator</a>
-        <a href="/calculators/bmi-calculator.html">BMI Calculator</a>
-        <a href="/calculators/discount-calculator.html">Discount Calculator</a>
-        <a href="/calculators/simple-interest-calculator.html">Simple Interest Calculator</a>
-        <a href="/calculators/compound-interest-calculator.html">Compound Interest Calculator</a>
-        <a href="/calculators/fd-calculator.html">FD Calculator</a>
-        <a href="/calculators/hra-calculator.html">HRA Calculator</a>
-        <a href="/calculators/ppf-calculator.html">PPF Calculator</a>
-        <a href="/calculators/salary-calculator.html">Salary Calculator</a>
-        <a href="/calculators/tip-calculator.html">Tip Calculator</a>
-        <a href="/calculators/unit-converter.html">Unit Converter</a>
-      </div>
-    </div>
-  </section>
 </div>
 
 <footer>
@@ -94,12 +248,31 @@
   </p>
 </footer>
 
-<script src="/calc-engine.js"></script>
 <script>
-  renderHome('calcContainer', 'tabs');
+  // Search functionality
+  document.getElementById('searchInput').addEventListener('input', function(e) {
+    const q = e.target.value.toLowerCase().trim();
+    document.querySelectorAll('.calc-card').forEach(card => {
+      const name = card.dataset.name || '';
+      const text = card.textContent.toLowerCase();
+      if (!q || name.includes(q) || text.includes(q)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    // Hide empty categories
+    document.querySelectorAll('.calc-category').forEach(cat => {
+      const visibleCards = cat.querySelectorAll('.calc-card:not([style*="display: none"])');
+      if (visibleCards.length === 0 && cat.querySelector('.calc-grid')) {
+        cat.style.display = 'none';
+      } else {
+        cat.style.display = '';
+      }
+    });
+  });
 </script>
 
-<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

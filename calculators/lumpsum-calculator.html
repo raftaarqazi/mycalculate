@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Lumpsum Calculator - Calculate returns on one-time mutual fund investment. Instant results.">
+<meta name="keywords" content="lumpsum calculator, mutual fund lumpsum, one time investment">
+<title>Lumpsum Calculator - MyCalculate.in</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lumpsum Calculator - Free Online Tool">
+<meta property="og:description" content="Calculate returns on one-time mutual fund investment.">
+<meta property="og:url" content="https://mycalculate.in/calculators/lumpsum-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lumpsum Calculator - Free Online Tool">
+<meta name="twitter:description" content="Calculate lumpsum returns instantly.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Lumpsum Calculator","url":"https://mycalculate.in/calculators/lumpsum-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate one-time mutual fund investment returns.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">MyCalculate<span>.in</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="#calculators">Calculators</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> › Lumpsum Calculator
+  </div>
+
+  <div class="card" id="calcContainer"></div>
+
+  <section class="content">
+    <h2>What is Lumpsum Investment?</h2>
+    <p>A lumpsum investment is when you invest a large amount of money at once in a mutual fund, rather than spreading it over time through SIP. It's suitable when you have surplus cash and want to invest it for long-term growth.</p>
+
+    <h2>Lumpsum vs SIP</h2>
+    <p><strong>Lumpsum:</strong> Invest all at once. Benefits when markets are low. Higher risk of timing.</p>
+    <p><strong>SIP:</strong> Invest monthly. Averages out market volatility. Lower risk.</p>
+    <p>Both can build wealth — the choice depends on your cash flow and risk appetite.</p>
+
+    <h2>Lumpsum Formula</h2>
+    <p><em>Future Value = P × (1 + R)^N</em></p>
+    <p>Where: <strong>P</strong> = Investment amount, <strong>R</strong> = Annual return rate, <strong>N</strong> = Number of years.</p>
+
+    <h2>Example: ₹1,00,000 at 12% for 10 years</h2>
+    <ul>
+      <li>Invested: ₹1,00,000</li>
+      <li>Estimated returns: ₹2,10,585</li>
+      <li>Total value: <strong>₹3,10,585</strong></li>
+    </ul>
+
+    <h2>When to Choose Lumpsum?</h2>
+    <ul>
+      <li>You have a large surplus (bonus, inheritance, property sale)</li>
+      <li>Markets are at reasonable valuations</li>
+      <li>You have a long investment horizon (7+ years)</li>
+      <li>You don't need the money anytime soon</li>
+    </ul>
+
+    <h2>When to Avoid Lumpsum?</h2>
+    <ul>
+      <li>Markets are at all-time highs</li>
+      <li>You might need money in the next 2-3 years</li>
+      <li>You're a beginner investor</li>
+      <li>You can't stomach short-term volatility</li>
+    </ul>
+
+    <h2>Why Use Our Lumpsum Calculator?</h2>
+    <p>See exactly how your one-time investment grows over your chosen period. Compare with SIP to decide the best strategy.</p>
+  </section>
+
+  <section class="content" id="related-calculators"></section>
+</div>
+
+<footer>
+  <p>© 2026 MyCalculate.in — Free Online Calculators</p>
+  <p style="margin-top:.5rem">
+    <a href="/about.html">About</a> |
+    <a href="/privacy.html">Privacy</a> |
+    <a href="/terms.html">Terms</a> |
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+<script src="/calc-engine.js"></script>
+<script>
+  renderCalc('calcContainer', 'lumpsum');
+  renderRelatedLinks('lumpsum');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>
