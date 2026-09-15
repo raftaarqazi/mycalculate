@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://mycalculate.in/sitemap.xml
+Sitemap: https://calqin.com/sitemap.xml

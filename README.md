@@ -1,4 +1,4 @@
-# MyCalculate.in
+# calqin.com
 
 Free online calculator website with 15+ calculators built with vanilla HTML/CSS/JS.
 
