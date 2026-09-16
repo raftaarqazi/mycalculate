@@ -46,36 +46,87 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>What is GST?</h2>
-    <p>GST (Goods and Services Tax) is a single indirect tax levied on the supply of goods and services in India. It replaced multiple taxes like VAT, Service Tax, and Excise Duty on 1st July 2017. GST is collected at every stage of the supply chain and is ultimately borne by the end consumer.</p>
+    <section class="content">
+  <h2>What is a GST Calculator?</h2>
+  <p>You're at a restaurant with three friends. The bill comes to ₹2,360. The menu said "prices exclusive of GST." Someone at the table asks — "So how much was the actual food?" You enter 2360, pick 18%, hit Remove GST. Base ₹2,000. GST ₹360. Done before the waiter comes back.</p>
 
-    <h2>GST Rates in India</h2>
-    <p>The GST Council has classified goods and services into four main tax slabs:</p>
-    <ul>
-      <li><strong>5%</strong> — Essential items like food grains, medicines, economy hotels</li>
-      <li><strong>12%</strong> — Processed foods, business class air tickets, some electronics</li>
-      <li><strong>18%</strong> — Most goods and services including soaps, electronics, restaurants</li>
-      <li><strong>28%</strong> — Luxury items like cars, tobacco, aerated drinks</li>
-    </ul>
+  <p>That's what this tool does — it removes the arithmetic from GST calculation. Two modes cover everything: adding GST to a base price (for quoting a customer) and removing GST from a total (for checking a bill or filing returns). Whether you're a freelancer sending your first invoice or a shop owner reconciling monthly purchases, the math runs the same way.</p>
 
-    <h2>How to Calculate GST?</h2>
-    <p>There are two scenarios where you need to calculate GST:</p>
-    <p><strong>1. Add GST (Exclusive):</strong> When you know the base price and need to add GST. Formula: <em>GST Amount = Base Price × GST Rate ÷ 100</em>. Example: ₹1,000 at 18% → GST = ₹180, Total = ₹1,180.</p>
-    <p><strong>2. Remove GST (Inclusive):</strong> When the price already includes GST and you want to find the base. Formula: <em>Base Price = Total × 100 ÷ (100 + Rate)</em>. Example: ₹1,180 at 18% → Base = ₹1,000, GST = ₹180.</p>
+  <h2>How to Use This GST Calculator</h2>
+  <p>There are two modes, and mixing them up is the most common error users make.</p>
 
-    <h2>Why Use Our GST Calculator?</h2>
-    <ul>
-      <li>✅ Instant results as you type</li>
-      <li>✅ Both Add and Remove GST modes</li>
-      <li>✅ All 4 GST slabs supported</li>
-      <li>✅ Works on mobile and desktop</li>
-      <li>✅ 100% free, no signup</li>
-    </ul>
+  <p><strong>Add GST:</strong> Use this when you know the base price. Say you're quoting a client for a ₹10,000 project at 18%. Enter 10000, select 18%, click Add GST. You get GST = ₹1,800 and Total = ₹11,800. This is what you write on the invoice.</p>
 
-    <h2>Who Needs a GST Calculator?</h2>
-    <p>Business owners, freelancers, accountants, students, and any consumer who wants to verify GST charges on their bills. It's especially useful for small business owners who need to quickly compute GST on invoices.</p>
-  </section>
+  <p><strong>Remove GST:</strong> Use this when you only have the final bill. The same client pays you ₹11,800. You now need to split it into base and tax for your books. Enter 11800, select 18%, click Remove GST. You get Base = ₹10,000 and GST = ₹1,800.</p>
 
+  <p>Users often assume "Remove GST" just subtracts 18% from the total. It doesn't. We'll get to why in the next section.</p>
+
+  <h2>The GST Formula (And Why Reverse Calculation Works Differently)</h2>
+  <p><strong>Adding GST is straightforward:</strong></p>
+  <p><em>GST Amount = Base Price × GST Rate ÷ 100</em><br><em>Total = Base Price + GST Amount</em></p>
+
+  <p><strong>Removing GST uses a different formula:</strong></p>
+  <p><em>Base Price = Total × 100 ÷ (100 + GST Rate)</em><br><em>GST Amount = Total − Base Price</em></p>
+
+  <p>Here's why. If ₹1,180 is the total at 18% GST, the base is not 1180 minus 18%. Because ₹1,180 is 118% of the base — not 100%. To find the base, you reverse-multiply: 1180 × 100 ÷ 118 = ₹1,000. If you just subtract 18% of ₹1,180 (₹212), you'd get ₹968 — which is wrong. That ₹32 difference looks small on one bill. It compounds over a year of invoices.</p>
+
+  <h2>Real Examples Across Different Use Cases</h2>
+
+  <p><strong>Example 1 — Local kirana purchase at 5% GST</strong><br>
+  You buy monthly groceries worth ₹4,500 (base). At 5% GST: GST = ₹225, Total = ₹4,725. Most people think groceries are GST-free. They aren't — they're just in the lowest slab. This matters when you're tracking household expenses and want to know how much tax you paid.</p>
+
+  <p><strong>Example 2 — Restaurant bill at 18%</strong><br>
+  Bill total ₹3,540, GST 18%. Base = ₹3,000, GST = ₹540. If you're splitting between 4 people, each person's share of GST is ₹135. Useful when the group wants to know how much of the bill was actually food.</p>
+
+  <p><strong>Example 3 — Laptop purchase at 18%</strong><br>
+  Laptop base price ₹68,000. GST = ₹12,240. Final = ₹80,240. If you're a business buying this for office use, that ₹12,240 shows up in your input tax credit claim at the end of the quarter. Getting this number right in your books matters.</p>
+
+  <p><strong>Example 4 — Freelancer invoicing a client in another state (IGST)</strong><br>
+  You're a designer in Pune billing a client in Bangalore for ₹1,00,000. Since it's an inter-state supply, IGST at 18% applies — not CGST + SGST. Invoice total = ₹1,18,000. The ₹18,000 you collect goes into your GST liability. At the end of the month, you offset it against input credit on your expenses and pay the balance to the government.</p>
+
+  <h2>Common Mistakes in GST Calculation</h2>
+  <ul>
+    <li><strong>Using "Add GST" when the price already includes it.</strong> If the bill shows a total that says "inclusive of GST", you need the Remove mode. Using Add mode here inflates the number by 18-20%.</li>
+    <li><strong>Assuming GST applies to the final price.</strong> It applies to the base. Add-on charges like packaging or delivery attract GST only if the supplier bills them separately with their own GST registration.</li>
+    <li><strong>Mixing up CGST, SGST, and IGST heads.</strong> A ₹1,180 invoice for an intra-state sale shows ₹90 CGST + ₹90 SGST — not ₹180 under one head. Inter-state sales use ₹180 IGST. Same total, different accounting.</li>
+    <li><strong>Using a single slab for a mixed cart.</strong> If a single invoice has items in 5% and 18% slabs, calculate each line separately. Applying 18% to the whole bill overcharges the customer; applying 5% undercharges them.</li>
+  </ul>
+
+  <h2>When This GST Calculator Doesn't Apply</h2>
+  <p>Some situations need more than a calculator:</p>
+  <ul>
+    <li><strong>Composition scheme businesses.</strong> They pay a flat rate on turnover (1% for traders, 5% for restaurants) instead of per-invoice GST. The calculator's per-invoice logic doesn't fit them.</li>
+    <li><strong>Exports and SEZ supplies.</strong> These are zero-rated. Technically no GST is charged, but refund claims require separate paperwork the calculator can't generate.</li>
+    <li><strong>Products with cess.</strong> Tobacco, coal, aerated drinks, and some cars attract additional compensation cess on top of GST. The final tax is higher than the slab rate shown here.</li>
+    <li><strong>Reverse charge mechanism.</strong> When the buyer pays GST directly to the government (specific cases like GTA services), the invoice shows no tax — but the liability exists.</li>
+  </ul>
+  <p>For these, talk to a CA. The calculator handles standard B2C and B2B invoicing; the edge cases need professional review.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <p><strong>Is GST calculated on the MRP?</strong><br>
+  No. MRP usually includes GST. A product with ₹118 MRP at 18% has a base of ₹100 and GST of ₹18. Use Remove GST mode to find both.</p>
+
+  <p><strong>What's the difference between CGST, SGST, and IGST?</strong><br>
+  CGST and SGST apply to intra-state sales — each is half the rate (9% + 9% = 18%). IGST applies to inter-state sales at the full rate (18%). Total tax is the same; the split matters only for accounting.</p>
+
+  <p><strong>Do I need to add GST on delivery charges?</strong><br>
+  Depends on how the supplier bills it. E-commerce platforms typically include delivery in the main invoice. Independent courier services with separate GST registration charge it separately. When unsure, check the invoice structure.</p>
+
+  <p><strong>Is GST the same as VAT?</strong><br>
+  No. VAT was the previous tax system, replaced by GST on 1 July 2017. VAT varied by state; GST is uniform across India. Any invoice before July 2017 would show VAT, not GST.</p>
+
+  <p><strong>How do I calculate GST backward from the total?</strong><br>
+  Use Remove GST mode. Enter the total, select the rate, and the calculator shows base and GST separately. Do not simply subtract the percentage from the total — that gives the wrong answer.</p>
+
+  <p><strong>Which GST rate applies to my product?</strong><br>
+  It depends on the HSN code for goods or SAC code for services. The four main slabs are 5%, 12%, 18%, and 28%. Most consumer goods and services fall in 18%. Check the GST Council's rate schedule for your specific category.</p>
+
+  <h2>Why This Calculator Exists</h2>
+  <p>GST math looks simple until it isn't. The reverse calculation trips up most people the first time, and ₹20-30 errors on individual bills add up to real money over a year. This calculator handles both directions in one click, works on any device, and doesn't ask for a signup. Whether you're double-checking a bill or preparing an invoice, the answer should take seconds.</p>
+
+  <p><em>Last updated: 16 September 2026</em></p>
+</section>
   <section class="content" id="related-calculators"></section>
 </div>
 
@@ -95,7 +146,6 @@
   renderRelatedLinks('gst');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
