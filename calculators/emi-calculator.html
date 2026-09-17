@@ -46,40 +46,88 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>What is EMI?</h2>
-    <p>EMI stands for Equated Monthly Installment. It's the fixed amount you pay every month to repay a loan. Each EMI consists of two parts: the <strong>principal</strong> (the amount you borrowed) and the <strong>interest</strong> (the cost of borrowing). In the early months, the interest component is higher; in the later months, the principal component grows.</p>
+  <h2>What is an EMI Calculator?</h2>
+  <p>You've shortlisted a ₹50 lakh flat. The bank says "8.5% interest, 20-year tenure." The only number you care about — the monthly EMI — isn't obvious from those figures. You enter three values: 50,00,000 loan amount, 8.5% rate, 240 months tenure. Result: ₹43,391 per month. Also shown: total interest ₹54.14 lakh, total payment ₹1.04 crore.</p>
 
-    <h2>EMI Formula</h2>
-    <p>The formula to calculate EMI is: <em>EMI = P × R × (1+R)^N ÷ ((1+R)^N − 1)</em></p>
-    <p>Where: <strong>P</strong> = Principal loan amount, <strong>R</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100), <strong>N</strong> = Number of monthly installments.</p>
+  <p>That's the whole job of an EMI calculator. It converts loan amount, interest rate, and tenure into three numbers — the monthly payment, the lifetime interest cost, and the total repayment. Whether you're comparing home loan offers from SBI and HDFC or deciding between a 20-year vs 15-year tenure, this gives you the numbers in one click.</p>
 
-    <h2>Example Calculation</h2>
-    <p>If you take a ₹5,00,000 home loan at 8.5% annual interest for 5 years (60 months):</p>
-    <ul>
-      <li>Monthly interest rate = 8.5 ÷ 12 ÷ 100 = 0.007083</li>
-      <li>EMI = 5,00,000 × 0.007083 × (1.007083)^60 ÷ ((1.007083)^60 − 1) ≈ <strong>₹10,259</strong></li>
-      <li>Total payment = ₹10,259 × 60 = ₹6,15,540</li>
-      <li>Total interest = ₹1,15,540</li>
-    </ul>
+  <h2>How to Use This EMI Calculator</h2>
+  <p>Three inputs, one output panel. No modes, no confusion.</p>
 
-    <h2>Factors That Affect EMI</h2>
-    <ul>
-      <li><strong>Loan Amount</strong> — Higher loan = higher EMI</li>
-      <li><strong>Interest Rate</strong> — Small rate changes have big impact over long tenure</li>
-      <li><strong>Tenure</strong> — Longer tenure = lower EMI but more total interest</li>
-    </ul>
+  <p><strong>Loan Amount:</strong> Enter the amount you're borrowing, not the property price. If the flat costs ₹60 lakh and you're paying ₹10 lakh down payment, the loan amount is ₹50 lakh. Enter 500000.</p>
 
-    <h2>Tips to Reduce Your EMI</h2>
-    <ul>
-      <li>Make a larger down payment to reduce principal</li>
-      <li>Negotiate for a lower interest rate — even 0.5% saves lakhs</li>
-      <li>Choose a shorter tenure if you can afford higher EMIs</li>
-      <li>Make prepayments whenever you have surplus cash</li>
-    </ul>
+  <p><strong>Interest Rate:</strong> The annual rate quoted by the bank, like 8.5 or 9.25. Enter 8.5, not 0.085. Home loans in India currently range from 8.4% to 9.5%. Car loans are higher, personal loans more.</p>
 
-    <h2>Why Use Our EMI Calculator?</h2>
-    <p>Our free EMI calculator gives you instant results with a clear breakdown of monthly payment, total interest, and total repayment. Use it for home loans, car loans, personal loans, education loans, or any other EMI-based borrowing.</p>
-  </section>
+  <p><strong>Tenure:</strong> Enter in months, not years. A 20-year loan is 240 months. Most users type 20 instead of 240 and get an EMI that's off by a factor of 20 — ₹8.5 lakh instead of ₹43,391.</p>
+
+  <p>The output shows three things: monthly EMI, total interest across the loan, and total repayment (principal + interest). New borrowers almost always check only the EMI and skip total interest — which is often 50-100% of the principal over long tenures.</p>
+
+  <h2>The EMI Formula (And Why It's Not Simple Division)</h2>
+  <p>The formula is: <em>EMI = P × R × (1+R)^N ÷ ((1+R)^N − 1)</em></p>
+
+  <p>Where <strong>P</strong> is the principal, <strong>R</strong> is the monthly interest rate (annual rate ÷ 12 ÷ 100), and <strong>N</strong> is the number of months.</p>
+
+  <p>Why isn't it just principal ÷ tenure? Because each EMI has two parts — interest and principal. In the early months, most of the EMI goes toward interest; the principal barely reduces. Over time, the ratio flips. The formula balances these so the loan is fully repaid by the end of tenure.</p>
+
+  <p>This is why a ₹50 lakh loan at 8.5% for 20 years costs ₹54.14 lakh in interest — more than the loan itself. If you estimated with simple division (₹50L ÷ 240 = ₹20,833), you'd be dramatically underestimating the real cost.</p>
+
+  <h2>Real Examples Across Loan Types</h2>
+
+  <p><strong>Example 1 — Home Loan (₹50 lakh, 8.5%, 20 years)</strong><br>
+  Monthly EMI: ₹43,391. Total interest: ₹54.14 lakh. Total payment: ₹1.04 crore. In year 1, roughly 80% of each EMI goes to interest. This is why prepayment in the first 5 years saves so much.</p>
+
+  <p><strong>Example 2 — Car Loan (₹8 lakh, 9.5%, 5 years)</strong><br>
+  Monthly EMI: ₹16,800. Total interest: ₹2.08 lakh. Total payment: ₹10.08 lakh. Car loans are short, so the interest is proportionally smaller. But the car depreciates faster than you repay the loan — you may still owe ₹4 lakh when the car is worth ₹5 lakh.</p>
+
+  <p><strong>Example 3 — Personal Loan (₹3 lakh, 14%, 3 years)</strong><br>
+  Monthly EMI: ₹10,255. Total interest: ₹69,180. Total payment: ₹3.69 lakh. Personal loans are unsecured, so rates are high. Borrowing ₹3 lakh for 3 years costs nearly ₹70,000 in interest alone — 23% of the loan amount.</p>
+
+  <p><strong>Example 4 — Prepayment Effect (₹50 lakh, 8.5%, 20 years, ₹5 lakh prepaid in year 5)</strong><br>
+  Without prepayment: ₹54.14 lakh interest. With ₹5 lakh prepaid in year 5 and tenure reduced (EMI constant): loan closes ~3 years earlier, saving roughly ₹12-14 lakh in interest. Prepayment in early years is one of the highest-return decisions a borrower can make.</p>
+
+  <h2>Common Mistakes in EMI Calculation</h2>
+  <ul>
+    <li><strong>Entering tenure in years instead of months.</strong> A 20-year loan is 240 months. Type 20 and the calculator shows ₹8.5 lakh EMI instead of ₹43,391. Always multiply years by 12.</li>
+    <li><strong>Confusing flat rate with reducing balance.</strong> Some NBFCs quote "10% flat" — that's actually ~18-19% reducing balance. Always check the method. Banks in India use reducing balance by default; smaller lenders sometimes don't.</li>
+    <li><strong>Ignoring total interest.</strong> A 30-year home loan at 8.5% costs ₹87 lakh in interest vs ₹54 lakh for 20 years on the same loan. Stretching tenure to lower EMI adds lakhs to what you repay.</li>
+    <li><strong>Forgetting processing fee and insurance.</strong> Banks charge 0.25-2% of loan as processing fee, plus loan insurance. On ₹50 lakh, that's ₹50,000-1,00,000 upfront — not reflected in the EMI.</li>
+  </ul>
+
+  <h2>When This EMI Calculator Doesn't Apply</h2>
+  <p>The standard EMI formula assumes a fixed rate and fixed EMI. Real loans sometimes don't work that way:</p>
+  <ul>
+    <li><strong>Step-up EMIs.</strong> Some loans for young professionals start lower and increase yearly. The calculator assumes constant EMI.</li>
+    <li><strong>Moratorium periods.</strong> Education loans often have a 1-2 year moratorium where only interest (or nothing) is paid before EMI begins.</li>
+    <li><strong>Floating rate changes.</strong> If the repo rate changes, banks adjust either EMI or tenure. The calculator gives a snapshot at today's rate.</li>
+    <li><strong>Prepayment plans.</strong> If you plan to close the loan early, actual interest will be lower than shown.</li>
+  </ul>
+  <p>For these, ask your bank for the amortization schedule. The calculator is a planning tool, not a substitute for the loan agreement.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <p><strong>What's the difference between flat rate and reducing rate?</strong><br>
+  Flat rate calculates interest on the entire principal for the whole tenure. Reducing rate calculates on the outstanding balance. A 10% flat loan is roughly equal to 18% reducing rate. Indian banks mostly use reducing rate; some NBFCs advertise flat to look cheaper.</p>
+
+  <p><strong>Shorter tenure with higher EMI or longer tenure with lower EMI — which is better?</strong><br>
+  Shorter tenure means higher EMI but far less total interest. If monthly cash flow allows it, shorter is better. A 15-year home loan at 8.5% saves roughly ₹18 lakh over a 20-year loan of the same amount.</p>
+
+  <p><strong>Does prepayment reduce EMI or tenure?</strong><br>
+  Both options exist. Most banks default to reducing tenure (keeping EMI same), which saves more interest. Some allow EMI reduction. When prepaying, tell the bank explicitly which option you want — reducing tenure usually saves ₹3-5 lakh extra on a 20-year home loan.</p>
+
+  <p><strong>How does credit score affect EMI?</strong><br>
+  Indirectly — via the interest rate. A 750+ score gets you a lower rate. On a ₹50 lakh home loan, a 0.5% rate cut saves about ₹1,700 per month and ₹4-5 lakh in total interest. Improving your score before applying is financially smart.</p>
+
+  <p><strong>Can I change my EMI during the loan?</strong><br>
+  Not directly. You can reduce tenure by prepaying, but the EMI stays fixed otherwise. Restructuring the loan (with bank approval) can change EMI but comes with paperwork and possible fees.</p>
+
+  <p><strong>What is an amortization schedule?</strong><br>
+  A month-by-month table showing how each EMI splits into interest and principal. In month 1, ~80% goes to interest; by month 240, nearly 100% goes to principal. Banks provide it on request — useful before making prepayment decisions.</p>
+
+  <h2>Why This Calculator Exists</h2>
+  <p>Loan math is deceptive. A 0.5% rate change or a 2-year tenure extension shifts total repayment by lakhs. Most borrowers check only the EMI and miss the lifetime cost. This calculator shows all three numbers together — monthly EMI, total interest, total repayment — so you can decide with full information. No signup, no interruptions.</p>
+
+  <p><em>Last updated: 17 September 2026</em></p>
+</section>
 
   <section class="content" id="related-calculators"></section>
 </div>
