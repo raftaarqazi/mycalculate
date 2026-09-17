@@ -35,6 +35,40 @@ const CALC_SLUGS = {
   dateDiff: 'date-difference-calculator'
 };
 
+// Related calculators mapping (5-6 relevant per calculator)
+const RELATED = {
+  gst: ['discount','salaryTax','salary','percentage'],
+  emi: ['homeLoanEligibility','carLoan','personalLoan','salaryTax'],
+  sip: ['lumpsum','cagr','nps','ppf'],
+  percentage: ['discount','tip','age','dateDiff'],
+  age: ['dateDiff','percentage','pregnancy'],
+  bmi: ['bmiKids','calorie','water'],
+  discount: ['gst','percentage','tip'],
+  simpleInterest: ['compoundInterest','fd','emi'],
+  compoundInterest: ['simpleInterest','sip','fd','lumpsum'],
+  fd: ['simpleInterest','compoundInterest','ppf','nps'],
+  hra: ['salary','salaryTax','gratuity'],
+  ppf: ['nps','fd','sip','lumpsum'],
+  salary: ['salaryTax','hra','gratuity'],
+  tip: ['discount','percentage'],
+  unitConverter: ['temperature','currency'],
+  salaryTax: ['salary','hra','gratuity'],
+  gratuity: ['salary','salaryTax'],
+  nps: ['ppf','sip','lumpsum','fd'],
+  lumpsum: ['sip','cagr','nps','ppf'],
+  cagr: ['sip','lumpsum','compoundInterest'],
+  homeLoanEligibility: ['emi','carLoan','personalLoan'],
+  carLoan: ['emi','homeLoanEligibility','personalLoan'],
+  personalLoan: ['emi','homeLoanEligibility','carLoan'],
+  currency: ['unitConverter','temperature'],
+  temperature: ['unitConverter','currency'],
+  bmiKids: ['bmi','calorie','water'],
+  calorie: ['bmi','water','bmiKids'],
+  water: ['bmi','calorie','bmiKids'],
+  pregnancy: ['age','dateDiff'],
+  dateDiff: ['age','percentage']
+};
+
 const CALCS = {
   gst: {
     name: 'GST Calculator',
@@ -98,10 +132,17 @@ const CALCS = {
     calc: v => {
       if(!v.dob)return [['Enter DOB','—']];
       const dob=new Date(v.dob),now=new Date();
-      let y=now.getFullYear()-dob.getFullYear(),m=now.getMonth()-dob.getMonth(),d=now.getDate()-dob.getDate();
-      if(d<0){m--;d+=30;}
+      let y=now.getFullYear()-dob.getFullYear();
+      let m=now.getMonth()-dob.getMonth();
+      let d=now.getDate()-dob.getDate();
+      if(d<0){
+        m--;
+        const daysInPrevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        d += daysInPrevMonth;
+      }
       if(m<0){y--;m+=12;}
-      const months=y*12+m,days=Math.floor((now-dob)/86400000);
+      const months=y*12+m;
+      const days=Math.floor((now-dob)/86400000);
       return [[`${y}y ${m}m ${d}d`,'Your Age',true],['Total Months',months+' months'],['Total Days',fmtNum(days)+' days']];
     }
   },
@@ -209,7 +250,7 @@ const CALCS = {
     calc: v => {
       const ctc=+v.ctc||0;
       const basic=ctc*0.4,pf=basic*0.12,std=50000;
-      const taxable=ctc-pf-std;
+      const taxable=ctc-std;
       let tax=0;
       if(taxable>300000){
         if(taxable<=600000)tax=(taxable-300000)*0.05;
@@ -390,7 +431,7 @@ const CALCS = {
       const amt=+v.amt||0;
       const rates={INR:1,USD:0.012,EUR:0.011,GBP:0.0095};
       const result=amt/rates[v.from]*rates[v.to];
-      return [['Converted',fmtNum(result)+' '+v.to,true]];
+      return [['Converted',fmtNum(result)+' '+v.to,true],['Note','Approx. rates. Verify with bank before transacting.']];
     }
   },
   temperature: {
@@ -495,7 +536,8 @@ function renderCalc(elId, calcKey) {
       f.o.forEach(([val, txt]) => { html += `<label><input type="radio" name="${calcKey}-${f.k}" value="${val}" data-k="${f.k}"${val == f.v ? ' checked' : ''}>${txt}</label>`; });
       html += `</div>`;
     } else {
-      html += `<input type="${f.t}" data-k="${f.k}" value="${f.v}"${f.step ? ` step="${f.step}"` : ''}>`;
+      const minAttr = f.t === 'number' ? ' min="0"' : '';
+      html += `<input type="${f.t}" data-k="${f.k}" value="${f.v}"${f.step ? ` step="${f.step}"` : ''}${minAttr}>`;
     }
     html += `</div>`;
   });
@@ -515,8 +557,25 @@ function renderCalc(elId, calcKey) {
 
   const update = () => {
     const v = getValues();
-    const out = calc.calc(v);
     const resultDiv = el.querySelector('[data-result]');
+    
+    // Input validation: check for invalid numbers
+    let hasError = false;
+    calc.fields.forEach(f => {
+      if (f.t === 'number') {
+        const val = v[f.k];
+        if (val === '' || val === undefined || isNaN(+val) || +val < 0) {
+          hasError = true;
+        }
+      }
+    });
+    
+    if (hasError) {
+      resultDiv.innerHTML = '<div class="result-row"><span class="label">Please enter valid positive numbers</span></div>';
+      return;
+    }
+
+    const out = calc.calc(v);
     resultDiv.innerHTML = out.map(([label, val, total]) =>
       `<div class="result-row${total ? ' total' : ''}"><span class="label">${label}</span><span class="value">${val}</span></div>`
     ).join('');
@@ -563,15 +622,20 @@ function renderHome(containerId, tabsId) {
   });
 }
 
-// ===== NEW: Render "Explore More Calculators" links =====
+// Render "Explore More Calculators" links (related only)
 function renderRelatedLinks(currentCalcKey) {
   const container = document.getElementById('related-calculators');
   if (!container) return;
 
+  let related = RELATED[currentCalcKey];
+  if (!related) {
+    related = Object.keys(CALCS).filter(k => k !== currentCalcKey).slice(0, 6);
+  }
+
   let html = '<h2>Explore More Calculators</h2><div class="grid-cards">';
-  Object.keys(CALCS).forEach(key => {
-    if (key !== currentCalcKey && CALC_SLUGS[key]) {
-      html += `<a href="/calculators/${CALC_SLUGS[key]}.html">${CALCS[key].name}</a>`;
+  related.forEach(key => {
+    if (CALC_SLUGS[key] && CALCS[key]) {
+      html += `<a href="/calculators/${CALC_SLUGS[key]}">${CALCS[key].name}</a>`;
     }
   });
   html += '</div>';
