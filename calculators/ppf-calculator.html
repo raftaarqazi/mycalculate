@@ -16,11 +16,26 @@
 <meta property="og:title" content="PPF Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate PPF maturity amount and interest. 15-year tax-free investment.">
 <meta property="og:url" content="https://calqin.com/calculators/ppf-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PPF Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate PPF maturity instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"PPF Calculator","url":"https://calqin.com/calculators/ppf-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate Public Provident Fund (PPF) maturity amount and interest.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"PPF Calculator","item":"https://calqin.com/calculators/ppf-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is PPF interest rate fixed for the entire 15 years?","acceptedAnswer":{"@type":"Answer","text":"No. The PPF rate is revised every quarter by the government based on the 10-year government bond yield. Over the last 10 years, it's moved between 7.1% and 8.7%. Rate changes apply to your entire PPF balance, not just fresh deposits."}},
+{"@type":"Question","name":"Can I have multiple PPF accounts?","acceptedAnswer":{"@type":"Answer","text":"No. One PPF account per person. You cannot have two PPF accounts in your own name. However, you can open PPF accounts for your spouse or children, and each account has its own ₹1.5 lakh yearly limit."}},
+{"@type":"Question","name":"What happens if I don't deposit for a year?","acceptedAnswer":{"@type":"Answer","text":"Your account doesn't get closed, but you pay a ₹50 penalty per year of non-deposit. The account remains active and continues earning interest on existing balance. Minimum deposit of ₹500 per year avoids this."}},
+{"@type":"Question","name":"Can I close my PPF account before 15 years?","acceptedAnswer":{"@type":"Answer","text":"Only in specific cases: medical emergency, higher education, or NRI status change. Closure before 5 years is generally not allowed. Between years 5 and 15, partial withdrawal is allowed up to 50% of balance at end of 4th year."}},
+{"@type":"Question","name":"Is PPF better than ELSS for tax saving?","acceptedAnswer":{"@type":"Answer","text":"Different tools for different needs. PPF is safe, tax-free, 15-year lock-in. ELSS is equity-based, 3-year lock-in, market-linked. Over 15 years, top ELSS funds delivered 12-14% CAGR vs PPF's 7-8%, but ELSS returns aren't guaranteed."}},
+{"@type":"Question","name":"What happens to my PPF if I become NRI?","acceptedAnswer":{"@type":"Answer","text":"You can continue your existing PPF account until maturity if you become NRI, but you cannot open a new PPF account as NRI. After maturity, the balance can be repatriated."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -48,45 +63,85 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>What is PPF?</h2>
-    <p>PPF (Public Provident Fund) is a government-backed long-term savings scheme with a 15-year tenure. It offers guaranteed returns, tax-free interest, and tax deduction under Section 80C. It's one of the safest investment options in India.</p>
+    <h2>What is a PPF Calculator?</h2>
+    <p>Anjali, 32, has been putting ₹1,50,000 into her PPF account every year for the last 3 years. Her colleague says "PPF matures in 15 years — you'll have around ₹40 lakh." Anjali isn't sure. Is it ₹40 lakh? ₹45 lakh? ₹35 lakh? Enter three numbers into this PPF calculator: ₹1,50,000 yearly, 7.1% interest, 15 years. Result: ₹40.68 lakh. That matches the rough estimate, and now Anjali knows the exact figure — and can plan accordingly.</p>
 
-    <h2>PPF Key Features</h2>
+    <p>This is what a PPF calculator does — it converts your yearly investment, expected rate, and tenure into a maturity amount that most people can only guess at. Since PPF involves 15 years of annual compounding, the math is nearly impossible to do mentally and error-prone even with a basic calculator.</p>
+
+    <h2>How to Use This PPF Calculator</h2>
+    <p>Three inputs. No modes, no complexities.</p>
+
+    <p><strong>Yearly Investment:</strong> The amount you plan to deposit into PPF each financial year. The minimum is ₹500/year, maximum is ₹1,50,000/year. Anything above ₹1.5 lakh doesn't earn interest and isn't eligible for tax deduction — so don't deposit more. Most people who use PPF for tax saving deposit exactly ₹1,50,000 to max out the 80C limit.</p>
+
+    <p><strong>Interest Rate:</strong> PPF rate is set by the government every quarter. As of September 2026, it's 7.1%. Over the last 10 years, it's ranged from 7.1% to 8.7%. The rate you enter applies to the entire 15-year tenure in this calculation, but in reality, each year's rate is decided quarterly.</p>
+
+    <p><strong>Duration:</strong> PPF has a 15-year lock-in. You can extend it in 5-year blocks after maturity. Most users enter 15. If you're planning to extend, enter 20 or 25 to see the extended corpus.</p>
+
+    <p>The output shows total invested, interest earned, and maturity amount. <strong>The number most people miss is "interest earned"</strong> — on a maxed-out PPF, the interest portion is often more than the invested amount. That's the whole point of PPF: you put in ₹22.5 lakh over 15 years, and the government pays you ₹18 lakh of tax-free interest on top.</p>
+
+    <h2>The PPF Formula (And Why It's Different from FD)</h2>
+    <p>PPF doesn't use a simple compound interest formula because the deposit happens annually, not once. The formula is: <em>Maturity = Σ [Yearly Investment × (1 + R)^remaining_years]</em></p>
+
+    <p>In plain English: each year's deposit grows for a different number of years. Your year-1 deposit of ₹1.5 lakh grows for 15 years. Year-2 deposit grows for 14 years. Year-15 deposit grows for only 1 year. The result is the sum of 15 separate compound interest calculations.</p>
+
+    <p>This is why the maturity amount (₹40.68 lakh) is so much higher than what a flat calculation would give. There's also a subtlety most people miss: PPF interest is calculated on the <strong>lowest balance between the 5th and last day of each month</strong>. This means if you deposit ₹1.5 lakh on the 10th of April, only the balance from the 5th counts — which might be zero. Smart depositors put money in before the 5th of April (start of financial year) to maximize interest.</p>
+
+    <h2>Real Examples at Different Scales</h2>
+
+    <p><strong>Example 1 — Minimum Investment (₹500/year at 7.1%, 15 years)</strong><br>
+    Total invested: ₹7,500. Interest earned: ₹6,000. Maturity: ₹13,500. This is the minimum to keep a PPF account active. The account doesn't get closed if you deposit the minimum, but returns are negligible. PPF only makes sense as a serious savings tool, not a token deposit.</p>
+
+    <p><strong>Example 2 — Small Saver (₹25,000/year at 7.1%, 15 years)</strong><br>
+    Total invested: ₹3,75,000. Interest earned: ₹3,00,000. Maturity: ₹6,75,000. This is what a part-time earner or a student saving from stipend might do. Returns are respectable and fully tax-free. Compare with a 7.1% FD over the same period — the FD gives roughly the same corpus, but the FD interest is taxable. PPF wins post-tax.</p>
+
+    <p><strong>Example 3 — Typical Tax Saver (₹1,50,000/year at 7.1%, 15 years)</strong><br>
+    Total invested: ₹22,50,000. Interest earned: ₹18,18,000. Maturity: ₹40,68,000. This is the classic PPF scenario — max out the 80C limit every year. Over 15 years, you invest ₹22.5 lakh and get back ₹40.68 lakh. The ₹18.18 lakh gain is 100% tax-free — no LTCG, no income tax, nothing.</p>
+
+    <p><strong>Example 4 — Extended PPF (₹1,50,000/year at 7.1%, 25 years)</strong><br>
+    Total invested: ₹37,50,000. Interest earned: ₹63,10,000. Maturity: ₹1,00,60,000. If you extend PPF beyond 15 years (allowed in 5-year blocks), the compounding becomes dramatic. Over 25 years, your ₹37.5 lakh grows to ₹1 crore. The interest earned (₹63 lakh) is 1.7x your investment.</p>
+
+    <h2>Common Mistakes in PPF Planning</h2>
     <ul>
-      <li><strong>Tenure:</strong> 15 years (extendable in 5-year blocks)</li>
-      <li><strong>Interest Rate:</strong> Currently 7.1% (revised quarterly)</li>
-      <li><strong>Minimum Investment:</strong> ₹500/year</li>
-      <li><strong>Maximum Investment:</strong> ₹1,50,000/year</li>
-      <li><strong>Tax:</strong> EEE — Exempt on investment, interest, and maturity</li>
-      <li><strong>Lock-in:</strong> 15 years (partial withdrawal from year 7)</li>
+      <li><strong>Depositing after the 5th of the month.</strong> PPF interest is calculated on the lowest balance between the 5th and last day of each month. If you deposit ₹1.5 lakh on April 10th, the entire amount misses April's interest. Deposit before the 5th (ideally on April 1-4) to maximize interest for that financial year. Over 15 years, this timing habit adds up.</li>
+      <li><strong>Thinking PPF is only for tax saving.</strong> The 80C deduction is a bonus, but PPF's real value is the tax-free maturity and safe compounding. Even if 80C were removed, PPF would still be a top-tier retirement tool for conservative investors.</li>
+      <li><strong>Ignoring the ₹1.5 lakh annual cap.</strong> Deposits above ₹1.5 lakh in a financial year don't earn interest and aren't eligible for 80C deduction. If you have more to invest, open an additional PPF account for your spouse or use Sukanya Samriddhi for a daughter.</li>
+      <li><strong>Withdrawing early unnecessarily.</strong> PPF allows partial withdrawal from year 7 onwards, but every rupee withdrawn stops compounding immediately. Use PPF withdrawals only for genuine emergencies.</li>
     </ul>
 
-    <h2>PPF Interest Calculation</h2>
-    <p>PPF interest is compounded annually. The formula:</p>
-    <p><em>Maturity = Σ [Investment × (1 + R)^remaining_years]</em></p>
-    <p>It's easier to use our calculator than to compute manually.</p>
-
-    <h2>Example: ₹1,50,000/year for 15 years at 7.1%</h2>
+    <h2>When This PPF Calculator Doesn't Apply</h2>
+    <p>PPF calculation has some edge cases the calculator simplifies:</p>
     <ul>
-      <li>Total invested = ₹22,50,000</li>
-      <li>Interest earned = ~₹18,18,000</li>
-      <li>Maturity amount = <strong>~₹40,68,000</strong></li>
+      <li><strong>Changing interest rates.</strong> PPF rates are revised quarterly. This calculator uses the current 7.1% for the entire tenure. In reality, rates might rise to 7.5% or fall to 6.8% in future years.</li>
+      <li><strong>Month-specific deposits.</strong> The formula assumes deposits happen at the start of each year. If you deposit throughout the year in different months, the calculation changes based on which month's balance was lowest.</li>
+      <li><strong>PPF extensions with fresh deposits.</strong> After 15 years, PPF can be extended with or without additional deposits. The rules differ. This calculator assumes fresh deposits continue.</li>
+      <li><strong>PPF withdrawals before maturity.</strong> Partial withdrawals in years 7-15 reduce the corpus and future compounding. The calculator shows the corpus assuming no withdrawals.</li>
     </ul>
-    <p>Completely tax-free!</p>
+    <p>For a precise projection, use the calculator on the India Post or SBI website, or consult the PPF rules on the National Savings Institute website.</p>
 
-    <h2>PPF vs Other Tax Saving Options</h2>
-    <ul>
-      <li><strong>PPF:</strong> Safe, tax-free, 15-year lock-in</li>
-      <li><strong>ELSS:</strong> Market-linked, 3-year lock-in</li>
-      <li><strong>NSC:</strong> 5-year, similar returns</li>
-      <li><strong>Tax Saver FD:</strong> 5-year, taxable interest</li>
-    </ul>
+    <h2>Frequently Asked Questions</h2>
 
-    <h2>Who Should Invest in PPF?</h2>
-    <p>Anyone looking for safe, long-term, tax-free returns. Ideal for retirement planning and for those uncomfortable with market volatility.</p>
+    <p><strong>Is PPF interest rate fixed for the entire 15 years?</strong><br>
+    No. The PPF rate is revised every quarter by the government, based on the 10-year government bond yield. Over the last 10 years, it's moved between 7.1% and 8.7%. When the rate changes, it applies to your entire PPF balance — not just fresh deposits. So a rate hike benefits your whole corpus, and a rate cut hurts your whole corpus.</p>
 
-    <h2>Why Use Our PPF Calculator?</h2>
-    <p>See exactly how your yearly investment grows over 15 years. Compare with other options and plan your tax-saving strategy.</p>
+    <p><strong>Can I have multiple PPF accounts?</strong><br>
+    No. One PPF account per person. You cannot have two PPF accounts in your own name. However, you can open a PPF account for your spouse or children (with you as guardian for minors), and each account has its own ₹1.5 lakh yearly limit. So a family of four can invest up to ₹6 lakh per year in PPF and save tax on all of it.</p>
+
+    <p><strong>What happens if I don't deposit for a year?</strong><br>
+    Your PPF account doesn't get closed, but you pay a ₹50 penalty per year of non-deposit. The account remains active and continues earning interest on the existing balance. If you don't deposit for many years, the account becomes dormant — you'll need to pay ₹50 per year of dormancy to reactivate it. Minimum deposit of ₹500 per year avoids this.</p>
+
+    <p><strong>Can I close my PPF account before 15 years?</strong><br>
+    Only in specific cases: medical emergency, higher education, or for NRI status change. Even then, closure before 5 years is generally not allowed. Between years 5 and 15, partial withdrawal is allowed (up to 50% of balance at end of 4th year), but full closure requires specific conditions. Plan for the full 15 years before opening a PPF account.</p>
+
+    <p><strong>Is PPF better than ELSS for tax saving?</strong><br>
+    Different tools for different needs. PPF is safe, tax-free, 15-year lock-in — good for conservative investors and retirement. ELSS is equity-based, 3-year lock-in, market-linked — good for investors who can stomach volatility and want higher returns. Data over the last 15 years shows ELSS (top funds) delivered 12-14% CAGR vs PPF's 7-8%. But ELSS returns aren't guaranteed, and post-tax ELSS returns narrow the gap with PPF significantly.</p>
+
+    <p><strong>What happens to my PPF if I become NRI?</strong><br>
+    You can continue your existing PPF account until maturity if you become NRI, but you cannot open a new PPF account as NRI. After maturity, the balance can be repatriated. Interest continues to earn, but the account is treated as a normal account, not a tax-exempt scheme for fresh investments under 80C.</p>
+
+    <h2>Why This Calculator Exists</h2>
+    <p>PPF involves 15 years of compounding, quarterly rate revisions, month-timing nuances, and tax-free maturity — four things that are hard to compute mentally. Getting the number right helps users plan realistic goals. Whether you're saving for retirement or just tracking how much your PPF corpus will be at maturity, this calculator gives you the exact figure. No signup, no ads in between.</p>
+
+    <p><em>Last updated: 18 September 2026</em></p>
   </section>
 
   <section class="content" id="related-calculators"></section>
@@ -95,10 +150,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -108,7 +163,6 @@
   renderRelatedLinks('ppf');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

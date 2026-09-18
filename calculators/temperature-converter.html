@@ -16,11 +16,26 @@
 <meta property="og:title" content="Temperature Converter - Free Online Tool">
 <meta property="og:description" content="Convert Celsius, Fahrenheit, Kelvin instantly.">
 <meta property="og:url" content="https://calqin.com/calculators/temperature-converter">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Temperature Converter - Free Online Tool">
 <meta name="twitter:description" content="Convert temperature instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Temperature Converter","url":"https://calqin.com/calculators/temperature-converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Convert Celsius, Fahrenheit, and Kelvin.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Temperature Converter","item":"https://calqin.com/calculators/temperature-converter"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I convert Celsius to Fahrenheit?","acceptedAnswer":{"@type":"Answer","text":"Formula: F = (C x 9/5) + 32. For example, 25C = (25 x 1.8) + 32 = 77F. Multiply first, then add the offset."}},
+{"@type":"Question","name":"How do I convert Fahrenheit to Celsius?","acceptedAnswer":{"@type":"Answer","text":"Formula: C = (F - 32) x 5/9. For example, 98.6F = (98.6 - 32) x 5/9 = 37C. Subtract the offset first, then multiply."}},
+{"@type":"Question","name":"What is Kelvin and when is it used?","acceptedAnswer":{"@type":"Answer","text":"Kelvin (K) is the scientific temperature scale starting at absolute zero (0K = -273.15C). Used in physics, chemistry, and engineering where ratios matter. No negative values — 0K is the coldest possible temperature."}},
+{"@type":"Question","name":"Why is Fahrenheit used in the US?","acceptedAnswer":{"@type":"Answer","text":"The Fahrenheit scale was developed in 1724 and was widely adopted before Celsius became standard. The US, Bahamas, and Cayman Islands still use it for everyday weather and cooking. Scientific contexts use Celsius or Kelvin."}},
+{"@type":"Question","name":"At what temperature are Celsius and Fahrenheit equal?","acceptedAnswer":{"@type":"Answer","text":"At -40 degrees, C = F. This is the only value where the two scales show the same number. Below -40, Celsius is higher numerically; above -40, Fahrenheit is higher."}},
+{"@type":"Question","name":"What is normal body temperature?","acceptedAnswer":{"@type":"Answer","text":"37C or 98.6F is considered normal. But normal varies by person and time of day — 36.1-37.2C (97-99F) is a healthy range. Fever is generally above 38C (100.4F)."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -48,41 +63,93 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>Temperature Scales</h2>
-    <p>There are three main temperature scales used worldwide:</p>
-    <ul>
-      <li><strong>Celsius (°C):</strong> Used in most countries including India. Water freezes at 0°C, boils at 100°C.</li>
-      <li><strong>Fahrenheit (°F):</strong> Used in USA and some Caribbean countries. Water freezes at 32°F, boils at 212°F.</li>
-      <li><strong>Kelvin (K):</strong> Scientific scale. Starts at absolute zero. Water freezes at 273.15K.</li>
-    </ul>
+  <h2>What is a Temperature Converter?</h2>
+  <p>Your cousin is studying in Boston and calls to say "it's 68 degrees here today." You're in Chennai where the temperature is 32°C. Is 68°F hotter or colder than 32°C? You pause, do mental math — 68 minus 32 is 36, times 5/9 is 20. So it's 20°C in Boston, cooler than Chennai's 32°C. The mental math worked this time, but for values like -40 or 100, doing it in your head is error-prone.</p>
 
-    <h2>Conversion Formulas</h2>
-    <p><strong>Celsius to Fahrenheit:</strong> °F = (°C × 9/5) + 32</p>
-    <p><strong>Fahrenheit to Celsius:</strong> °C = (°F − 32) × 5/9</p>
-    <p><strong>Celsius to Kelvin:</strong> K = °C + 273.15</p>
-    <p><strong>Kelvin to Celsius:</strong> °C = K − 273.15</p>
+  <p>This temperature converter does the math instantly. Enter any value in Celsius, Fahrenheit, or Kelvin, and it shows all three scales at once. Used by travelers checking foreign weather, students solving physics problems, cooks following American recipes, and anyone reading international news with temperature references.</p>
 
-    <h2>Quick Reference</h2>
-    <ul>
-      <li>0°C = 32°F = 273.15K (Water freezes)</li>
-      <li>25°C = 77°F = 298.15K (Room temperature)</li>
-      <li>37°C = 98.6°F = 310.15K (Human body)</li>
-      <li>100°C = 212°F = 373.15K (Water boils)</li>
-    </ul>
+  <h2>How to Use This Temperature Converter</h2>
+  <p>Two inputs. Three outputs. No ambiguity.</p>
 
-    <h2>When You Need Temperature Conversion</h2>
-    <ul>
-      <li>Traveling to USA or other Fahrenheit-using countries</li>
-      <li>Reading international weather forecasts</li>
-      <li>Cooking with foreign recipes</li>
-      <li>Science homework and lab work</li>
-      <li>Understanding global climate data</li>
-      <li>Medical temperature readings</li>
-    </ul>
+  <p><strong>Temperature:</strong> The value you want to convert. For 32°C, enter 32. For -40°F, enter -40 (negative values are accepted — that's important, since temperatures below zero are common in many parts of the world). For 300K, enter 300.</p>
 
-    <h2>Why Use Our Temperature Converter?</h2>
-    <p>Convert between Celsius, Fahrenheit, and Kelvin instantly. Shows all three units at once for convenience.</p>
-  </section>
+  <p><strong>From:</strong> The scale you're converting from. Select Celsius, Fahrenheit, or Kelvin from the dropdown.</p>
+
+  <p>The output shows all three scales simultaneously — Celsius, Fahrenheit, and Kelvin. <strong>Most users check only the one they wanted to convert to</strong>, but the all-three display saves a second lookup. If you entered Celsius, you immediately see the Kelvin value too, which is useful for scientific contexts.</p>
+
+  <p>One subtle but important detail: the calculator doesn't have a "To" field. It shows all three scales because temperature conversion is always a full set. If you know Celsius, you always get Fahrenheit and Kelvin for free. This is different from other converters (like length) where you might want km → miles but not km → feet. Temperature only has three scales in common use, so showing all three makes sense.</p>
+
+  <h2>The Temperature Formulas (And Why They're Not Simple Multiplication)</h2>
+  <p>Unlike length or weight conversions, temperature scales don't start at the same zero point. That's why the formulas have offsets.</p>
+
+  <p><strong>Celsius to Fahrenheit:</strong> <em>°F = (°C × 9/5) + 32</em></p>
+  <p><strong>Fahrenheit to Celsius:</strong> <em>°C = (°F − 32) × 5/9</em></p>
+  <p><strong>Celsius to Kelvin:</strong> <em>K = °C + 273.15</em></p>
+  <p><strong>Kelvin to Celsius:</strong> <em>°C = K − 273.15</em></p>
+
+  <p>The "+32" in the Celsius-to-Fahrenheit formula exists because 0°C equals 32°F — water freezes at different numerical values on the two scales. The "9/5" ratio exists because 100 Celsius degrees (from freezing to boiling) equal 180 Fahrenheit degrees. So each Celsius degree equals 1.8 Fahrenheit degrees.</p>
+
+  <p>Kelvin has no negative values because 0 Kelvin is absolute zero — the theoretical point where all molecular motion stops. Nothing can be colder than 0K. That's why Kelvin is used in scientific contexts where negative temperatures don't make sense. On the Celsius scale, absolute zero is -273.15°C. On Fahrenheit, it's -459.67°F.</p>
+
+  <p>Here's why you can't just multiply: If you convert 20°C to Fahrenheit using the ratio 9/5 only (20 × 1.8 = 36), you get 36, which is wrong. The correct answer is 68. The missing 32 is the offset — the difference in where the scales start counting.</p>
+
+  <h2>Real Examples at Different Scales</h2>
+
+  <p><strong>Example 1 — Weather Check (28°C to Fahrenheit)</strong><br>
+  Input: 28°C. Output: 82.4°F, 301.15K. A summer day in Mumbai. A US-based relative asks "how hot is it?" — 82.4°F sounds more familiar to them. This is the most common real-world use: translating your local weather for someone in another country.</p>
+
+  <p><strong>Example 2 — Fever Check (101.5°F to Celsius)</strong><br>
+  Input: 101.5°F. Output: 38.61°C, 311.76K. A child's fever reading from a digital thermometer (US brand). Indian parents want the Celsius value to compare with "normal is 37°C" guidance. 38.61°C is clearly a fever. In Celsius, anything above 38°C needs medical attention for a child.</p>
+
+  <p><strong>Example 3 — Cooking (350°F to Celsius)</strong><br>
+  Input: 350°F. Output: 176.67°C, 449.82K. The classic American oven temperature for baking. Indian recipes rarely specify Fahrenheit, so this conversion is essential when following US recipes. 176.67°C rounds to 180°C for practical purposes. Most convection ovens in India display Celsius, so knowing the equivalent matters when trying foreign recipes.</p>
+
+  <p><strong>Example 4 — Science Homework (300K to Celsius and Fahrenheit)</strong><br>
+  Input: 300K. Output: 26.85°C, 80.33°F. A common physics problem. 300K is close to room temperature (roughly 27°C) — a useful anchor point. For science contexts, knowing that 273.15K = 0°C and 373.15K = 100°C helps you sanity-check any conversion.</p>
+
+  <h2>Common Mistakes in Temperature Conversion</h2>
+  <ul>
+    <li><strong>Adding 32 before multiplying.</strong> The formula is (°C × 9/5) + 32, not °C × (9/5 + 32). Order of operations matters. 30°C is 86°F, not 30 × 1.8 + 32 = 86 — wait, that actually works. But 30 × 9/5 = 54 + 32 = 86 ✅. If you do 30 × (1.8 + 32) = 30 × 33.8 = 1014 — completely wrong. Always multiply first, then add.</li>
+    <li><strong>Confusing negative temperatures.</strong> -40°C = -40°F — the only value where Celsius and Fahrenheit are equal. Users often think negative conversion works differently, but the formula applies the same way. -10°C = 14°F (not -50°F or similar).</li>
+    <li><strong>Using 273 instead of 273.15 for Kelvin.</strong> The exact conversion uses 273.15 because absolute zero is -273.15°C. For everyday purposes, 273 works fine. For scientific work, use 273.15. The calculator uses 273.15 for accuracy.</li>
+    <li><strong>Assuming temperature is a ratio scale.</strong> 40°C isn't "twice as hot" as 20°C in a meaningful physical sense. Temperature is an interval scale — differences are meaningful, but ratios are not. Users sometimes try to compare temperatures multiplicatively and get confused.</li>
+  </ul>
+
+  <h2>When This Temperature Converter Doesn't Apply</h2>
+  <p>The three-scale conversion covers almost all everyday needs, but some edge cases exist:</p>
+  <ul>
+    <li><strong>Rankine scale.</strong> Used in some US engineering contexts (a Fahrenheit-based absolute scale). Not covered by this calculator. Rankine = Fahrenheit + 459.67.</li>
+    <li><strong>Réaumur and Rømer scales.</strong> Historical scales still occasionally referenced in old European texts. Not covered here.</li>
+    <li><strong>Wind chill and heat index.</strong> These are "feels-like" temperatures that factor in wind and humidity — not direct scale conversions. Different formulas.</li>
+    <li><strong>Color temperature.</strong> Used for lighting (like 5000K for daylight). Same unit name (Kelvin) but measures a different physical property. Not a temperature in the thermodynamic sense.</li>
+  </ul>
+  <p>For 99% of daily use — weather, cooking, fever, homework — the three scales cover everything.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <p><strong>Why is Fahrenheit still used?</strong><br>
+  Historical reasons. The Fahrenheit scale was developed in 1724 and was widely adopted in English-speaking countries before Celsius became standard. The US, Bahamas, Cayman Islands, and a few other countries still use it for everyday weather and cooking. Scientific contexts use Celsius or Kelvin almost everywhere.</p>
+
+  <p><strong>Is Kelvin better than Celsius for science?</strong><br>
+  Yes, for many calculations. Kelvin starts at absolute zero, so ratios and multiples work correctly — 300K is twice as hot as 150K in the physically meaningful sense. Celsius has an offset (0°C isn't "no temperature"), so comparisons are limited. Thermodynamics, gas laws, and quantum physics all use Kelvin.</p>
+
+  <p><strong>At what temperature are Celsius and Fahrenheit equal?</strong><br>
+  -40 degrees. That's the only value where °C = °F. Below -40, Celsius is actually higher than Fahrenheit numerically. Above -40, Fahrenheit is higher. This crossover point is a useful anchor for sanity-checking conversions.</p>
+
+  <p><strong>What is the normal human body temperature?</strong><br>
+  37°C or 98.6°F. But "normal" varies by person and time of day — 36.1-37.2°C (97-99°F) is the common range. A fever is generally defined as above 38°C (100.4°F). Different sources use slightly different thresholds.</p>
+
+  <p><strong>Why is water's boiling point 100°C but 212°F?</strong><br>
+  Because the Celsius scale was designed with 0 as freezing and 100 as boiling — exactly 100 degrees apart. Fahrenheit used a different reference: 32 as freezing (based on brine) and 212 as boiling. The 180-degree difference between freezing and boiling in Fahrenheit is why each Celsius degree equals 1.8 Fahrenheit degrees.</p>
+
+  <p><strong>Is 0°C the same as 0K?</strong><br>
+  No. 0°C is the freezing point of water (273.15K). 0K is absolute zero — the coldest possible temperature, where molecular motion theoretically stops. That's -273.15°C. A massive difference. Don't confuse the zeros.</p>
+
+  <h2>Why This Calculator Exists</h2>
+  <p>Temperature conversion is one of the few calculations where mental math regularly fails — the offset and fraction combine in ways that trip up even experienced users. Whether you're reading US weather, following an American recipe, or helping a child with physics homework, the correct value should be instant and unambiguous. This calculator shows all three scales at once so you don't need to remember which scale you were converting to. No signup, no ads in between.</p>
+
+  <p><em>Last updated: 18 September 2026</em></p>
+</section>
 
   <section class="content" id="related-calculators"></section>
 </div>
@@ -90,10 +157,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 

@@ -16,11 +16,26 @@
 <meta property="og:title" content="Compound Interest Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate compound interest with yearly, quarterly, or monthly compounding.">
 <meta property="og:url" content="https://calqin.com/calculators/compound-interest-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Compound Interest Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate compound interest instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator","url":"https://calqin.com/calculators/compound-interest-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate compound interest with any compounding frequency.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Compound Interest Calculator","item":"https://calqin.com/calculators/compound-interest-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is compound interest?","acceptedAnswer":{"@type":"Answer","text":"Compound interest is interest calculated on both the principal and accumulated interest. Over time, this creates exponential growth because interest earns its own interest. It's the basis of most investment returns."}},
+{"@type":"Question","name":"What is the compound interest formula?","acceptedAnswer":{"@type":"Answer","text":"A = P x (1 + R/N)^(N x T), where P is principal, R is annual rate as decimal, N is compounding frequency per year, and T is time in years. Compound interest = A - P."}},
+{"@type":"Question","name":"How does compounding frequency affect returns?","acceptedAnswer":{"@type":"Answer","text":"More frequent compounding = higher returns. Monthly compounding gives slightly more than quarterly, which gives more than annual. On 10,000 at 7.5% for 3 years: annual gives 12,423, monthly gives 12,491."}},
+{"@type":"Question","name":"What is the difference between simple and compound interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is calculated only on principal, growing linearly. Compound interest is calculated on principal plus accumulated interest, growing exponentially. Over long periods, compound interest gives much higher returns."}},
+{"@type":"Question","name":"Does compound interest work against me on loans?","acceptedAnswer":{"@type":"Answer","text":"Yes. Credit card debt compounds daily at 36-42% annual rate, making balances grow very fast. Any loan with compound interest becomes expensive if not repaid quickly. Pay off high-interest debt aggressively."}},
+{"@type":"Question","name":"What is the Rule of 72?","acceptedAnswer":{"@type":"Answer","text":"The Rule of 72 estimates how long an investment takes to double: 72 divided by interest rate = years to double. At 12% return, money doubles in approximately 6 years. At 8%, it doubles in 9 years."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -94,10 +109,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -107,7 +122,6 @@
   renderRelatedLinks('compoundInterest');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

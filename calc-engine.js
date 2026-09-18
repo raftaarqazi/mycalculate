@@ -1,7 +1,7 @@
 const fmtINR = n => '₹' + Number(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmtNum = n => Number(n).toLocaleString('en-IN',{maximumFractionDigits:2});
 
-// Mapping: CALC key -> HTML file name
+// Mapping: CALC key -> HTML file name (no .html, no leading slash — Vercel cleanUrls)
 const CALC_SLUGS = {
   gst: 'gst-calculator',
   emi: 'emi-calculator',
@@ -35,7 +35,7 @@ const CALC_SLUGS = {
   dateDiff: 'date-difference-calculator'
 };
 
-// Related calculators mapping (5-6 relevant per calculator)
+// Related calculators mapping
 const RELATED = {
   gst: ['discount','salaryTax','salary','percentage'],
   emi: ['homeLoanEligibility','carLoan','personalLoan','salaryTax'],
@@ -137,8 +137,8 @@ const CALCS = {
       let d=now.getDate()-dob.getDate();
       if(d<0){
         m--;
-        const daysInPrevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-        d += daysInPrevMonth;
+        const daysInPrevMonth=new Date(now.getFullYear(),now.getMonth(),0).getDate();
+        d+=daysInPrevMonth;
       }
       if(m<0){y--;m+=12;}
       const months=y*12+m;
@@ -262,7 +262,7 @@ const CALCS = {
       tax*=1.04;
       const monthly=ctc/12,monthlyTax=tax/12,monthlyPf=pf/12;
       const takeHome=monthly-monthlyTax-monthlyPf;
-      return [['Monthly Gross',fmtINR(monthly)],['Monthly PF',fmtINR(monthlyPf)],['Monthly Tax',fmtINR(monthlyTax)],['Take Home (Monthly)',fmtINR(takeHome),true]];
+      return [['Monthly Gross',fmtINR(monthly)],['Monthly PF',fmtINR(monthlyPf)],['Monthly Tax',fmtINR(monthlyTax)],['Take Home (Monthly)',fmtINR(takeHome),true],['Note','New Tax Regime (FY 2025-26) assumed']];
     }
   },
   tip: {
@@ -431,7 +431,7 @@ const CALCS = {
       const amt=+v.amt||0;
       const rates={INR:1,USD:0.012,EUR:0.011,GBP:0.0095};
       const result=amt/rates[v.from]*rates[v.to];
-      return [['Converted',fmtNum(result)+' '+v.to,true],['Note','Approx. rates. Verify with bank before transacting.']];
+      return [['Converted',fmtNum(result)+' '+v.to,true],['Note','Approx. rates (updated Sep 2026). Verify with bank before transacting.']];
     }
   },
   temperature: {
@@ -517,6 +517,22 @@ const CALCS = {
   }
 };
 
+// ===== SHARE RESULT =====
+function shareCalcResult(calcName) {
+  const el = document.querySelector('[data-result]');
+  if (!el) return;
+  const text = calcName + '\n' + el.innerText + '\n\nCalculated at calqin.com';
+  if (navigator.share) {
+    navigator.share({ title: calcName + ' - Calqin', text: text, url: location.href }).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text + '\n' + location.href).then(() => {
+      alert('✅ Result copied! Paste it anywhere.');
+    }).catch(() => {
+      alert('Could not copy. Please select and copy manually.');
+    });
+  }
+}
+
 // ===== RENDER ENGINE =====
 function renderCalc(elId, calcKey) {
   const calc = CALCS[calcKey];
@@ -542,6 +558,7 @@ function renderCalc(elId, calcKey) {
     html += `</div>`;
   });
   html += `<div class="result show" data-result></div>`;
+  html += `<button type="button" class="share-btn" onclick="shareCalcResult('${calc.name.replace(/'/g, "\\'")}')">📤 Share / Copy Result</button>`;
   el.innerHTML = html;
 
   const getValues = () => {
@@ -558,8 +575,7 @@ function renderCalc(elId, calcKey) {
   const update = () => {
     const v = getValues();
     const resultDiv = el.querySelector('[data-result]');
-    
-    // Input validation: check for invalid numbers
+
     let hasError = false;
     calc.fields.forEach(f => {
       if (f.t === 'number') {
@@ -569,7 +585,7 @@ function renderCalc(elId, calcKey) {
         }
       }
     });
-    
+
     if (hasError) {
       resultDiv.innerHTML = '<div class="result-row"><span class="label">Please enter valid positive numbers</span></div>';
       return;
@@ -588,41 +604,7 @@ function renderCalc(elId, calcKey) {
   update();
 }
 
-// Homepage: render all as tabs
-function renderHome(containerId, tabsId) {
-  const container = document.getElementById(containerId);
-  const tabs = document.getElementById(tabsId);
-  if (!container || !tabs) return;
-
-  let first = true;
-  Object.keys(CALCS).forEach(key => {
-    const c = CALCS[key];
-    const t = document.createElement('div');
-    t.className = 'tab' + (first ? ' active' : '');
-    t.textContent = c.name.replace(' Calculator', '');
-    t.dataset.id = key;
-    tabs.appendChild(t);
-
-    const panel = document.createElement('div');
-    panel.className = 'card calc-panel' + (first ? ' active' : '');
-    panel.id = 'panel-' + key;
-    container.appendChild(panel);
-
-    renderCalc('panel-' + key, key);
-    first = false;
-  });
-
-  tabs.querySelectorAll('.tab').forEach(t => {
-    t.addEventListener('click', () => {
-      tabs.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-      container.querySelectorAll('.calc-panel').forEach(x => x.classList.remove('active'));
-      t.classList.add('active');
-      document.getElementById('panel-' + t.dataset.id).classList.add('active');
-    });
-  });
-}
-
-// Render "Explore More Calculators" links (related only)
+// ===== RELATED LINKS =====
 function renderRelatedLinks(currentCalcKey) {
   const container = document.getElementById('related-calculators');
   if (!container) return;
@@ -641,3 +623,13 @@ function renderRelatedLinks(currentCalcKey) {
   html += '</div>';
   container.innerHTML = html;
 }
+
+// ===== GLOBAL INIT (runs on every page) =====
+document.addEventListener('DOMContentLoaded', () => {
+  // Auto-close mobile menu on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.querySelector('.nav-links')?.classList.remove('open');
+    });
+  });
+});

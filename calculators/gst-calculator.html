@@ -16,11 +16,26 @@
 <meta property="og:title" content="GST Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate GST instantly. Add or remove GST at 5%, 12%, 18%, 28% rates.">
 <meta property="og:url" content="https://calqin.com/calculators/gst-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GST Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate GST instantly. Add or remove GST at 5%, 12%, 18%, 28% rates.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"GST Calculator","url":"https://calqin.com/calculators/gst-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free GST Calculator to add or remove GST at 5%, 12%, 18%, 28% rates.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"GST Calculator","item":"https://calqin.com/calculators/gst-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is GST calculated on the MRP?","acceptedAnswer":{"@type":"Answer","text":"No. MRP usually includes GST. A product with ₹118 MRP at 18% has a base of ₹100 and GST of ₹18. Use Remove GST mode to find both."}},
+{"@type":"Question","name":"What's the difference between CGST, SGST, and IGST?","acceptedAnswer":{"@type":"Answer","text":"CGST and SGST apply to intra-state sales — each is half the rate (9% + 9% = 18%). IGST applies to inter-state sales at the full rate (18%). Total tax is the same; the split matters only for accounting."}},
+{"@type":"Question","name":"Do I need to add GST on delivery charges?","acceptedAnswer":{"@type":"Answer","text":"Depends on how the supplier bills it. E-commerce platforms typically include delivery in the main invoice. Independent courier services with separate GST registration charge it separately."}},
+{"@type":"Question","name":"Is GST the same as VAT?","acceptedAnswer":{"@type":"Answer","text":"No. VAT was the previous tax system, replaced by GST on 1 July 2017. VAT varied by state; GST is uniform across India."}},
+{"@type":"Question","name":"How do I calculate GST backward from the total?","acceptedAnswer":{"@type":"Answer","text":"Use Remove GST mode. Enter the total, select the rate, and the calculator shows base and GST separately. Do not simply subtract the percentage from the total."}},
+{"@type":"Question","name":"Which GST rate applies to my product?","acceptedAnswer":{"@type":"Answer","text":"It depends on the HSN code for goods or SAC code for services. The four main slabs are 5%, 12%, 18%, and 28%. Most consumer goods and services fall in 18%."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -128,16 +143,17 @@
 
   <p><em>Last updated: 16 September 2026</em></p>
 </section>
+
   <section class="content" id="related-calculators"></section>
 </div>
 
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 

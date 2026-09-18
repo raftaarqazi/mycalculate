@@ -16,11 +16,26 @@
 <meta property="og:title" content="Calorie Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate BMR and daily calorie needs instantly.">
 <meta property="og:url" content="https://calqin.com/calculators/calorie-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Calorie Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate your daily calorie needs.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Calorie Calculator","url":"https://calqin.com/calculators/calorie-calculator","applicationCategory":"HealthApplication","operatingSystem":"Any","description":"Calculate BMR, TDEE, and daily calorie needs.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Calorie Calculator","item":"https://calqin.com/calculators/calorie-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is BMR and TDEE?","acceptedAnswer":{"@type":"Answer","text":"BMR (Basal Metabolic Rate) is calories your body burns at rest. TDEE (Total Daily Energy Expenditure) is BMR multiplied by an activity factor, representing total daily calorie burn including exercise and daily movement."}},
+{"@type":"Question","name":"Which formula is most accurate for BMR?","acceptedAnswer":{"@type":"Answer","text":"The Mifflin-St Jeor formula is considered the most accurate for most people. It uses weight, height, age, and gender. The Harris-Benedict formula is older but slightly less accurate."}},
+{"@type":"Question","name":"How many calories should I eat to lose weight?","acceptedAnswer":{"@type":"Answer","text":"A deficit of 500 calories per day from your TDEE leads to roughly 0.5 kg weight loss per week. Eating below 1,200 calories (women) or 1,500 calories (men) is generally not recommended without medical supervision."}},
+{"@type":"Question","name":"Do I need to eat back the calories I burn during exercise?","acceptedAnswer":{"@type":"Answer","text":"No. TDEE already includes your typical activity. Only add extra calories if you did unusually intense or long workouts. Otherwise, count the total TDEE as your daily target."}},
+{"@type":"Question","name":"How accurate is a calorie calculator?","acceptedAnswer":{"@type":"Answer","text":"The calculator gives an estimate based on average formulas. Individual metabolism varies by 10-15%. Use it as a starting point, then adjust based on real-world results over 2-3 weeks."}},
+{"@type":"Question","name":"Do calories from protein, carbs, and fat matter equally?","acceptedAnswer":{"@type":"Answer","text":"No. Protein and carbs provide 4 calories per gram, fat provides 9 calories per gram. For weight loss, total calorie intake matters most, but protein helps preserve muscle, and fiber helps with satiety."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -92,10 +107,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 

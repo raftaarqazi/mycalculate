@@ -16,11 +16,26 @@
 <meta property="og:title" content="Salary Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate take-home salary from CTC instantly. See monthly PF, tax, and in-hand salary.">
 <meta property="og:url" content="https://calqin.com/calculators/salary-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Salary Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate take-home salary instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Salary Calculator","url":"https://calqin.com/calculators/salary-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate take-home salary from CTC with PF and tax breakdown.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Salary Calculator","item":"https://calqin.com/calculators/salary-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the difference between CTC and take-home salary?","acceptedAnswer":{"@type":"Answer","text":"CTC (Cost to Company) includes employer PF, gratuity, and insurance. Take-home is what reaches your bank after employee PF, income tax, and professional tax. On 8 LPA CTC, take-home is roughly 58,000-62,000 per month."}},
+{"@type":"Question","name":"Why is my take-home so much lower than CTC/12?","acceptedAnswer":{"@type":"Answer","text":"Three things come out before you see money: employer PF (12% of basic), gratuity (4.81% of basic), and insurance premiums. Then employee PF and income tax further reduce take-home. Expect 20-25% less than CTC/12."}},
+{"@type":"Question","name":"Is PF deduction mandatory?","acceptedAnswer":{"@type":"Answer","text":"Yes, for employees in establishments with 20+ employees. Contribution is 12% of basic (up to 15,000 basic). You can opt for VPF (Voluntary PF) to contribute more. PF earns 8.25% tax-free interest."}},
+{"@type":"Question","name":"What is professional tax?","acceptedAnswer":{"@type":"Answer","text":"Professional tax is a state-level tax on income, deducted from salary. Rates vary by state — 200-2,500 per year. Maharashtra, Karnataka, and West Bengal charge it; Delhi doesn't."}},
+{"@type":"Question","name":"How can I increase my take-home salary?","acceptedAnswer":{"@type":"Answer","text":"Three strategies: (1) Claim HRA exemption with rent receipts. (2) Structure salary with Flexible Benefit Plans (meal cards, LTA, fuel). (3) Choose the tax regime that fits your deductions. Can increase take-home by 20,000-50,000 per year."}},
+{"@type":"Question","name":"What is the standard deduction in the new tax regime?","acceptedAnswer":{"@type":"Answer","text":"50,000 per year, same as the old regime. It's a flat deduction from gross salary, no receipts required. On 10 LPA, only 9.5L is taxable after standard deduction."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -48,53 +63,91 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>What is CTC?</h2>
-    <p>CTC stands for Cost to Company — the total amount your employer spends on you annually. It includes basic salary, HRA, special allowances, employer PF contribution, gratuity, and other benefits. CTC is NOT the same as your take-home salary.</p>
+  <h2>What is a Salary Calculator?</h2>
+  <p>Aarav got a job offer — ₹8 LPA CTC. He tells his father, who assumes ₹66,666 will hit the bank every month. Aarav's first payslip shows ₹58,200. Where did ₹8,400 go? The PF deduction, professional tax, and income tax ate into it. His father is confused. Aarav pulls out this salary calculator, enters 800000, and shows the breakdown: gross monthly ₹66,666, PF ₹2,400, tax ₹4,900, professional tax ₹200, take-home ₹58,200.</p>
 
-    <h2>Take-Home Salary vs CTC</h2>
-    <p>Take-home salary (in-hand salary) is what actually reaches your bank account each month. The gap between CTC and take-home is due to deductions like employee PF, income tax, professional tax, and other contributions.</p>
+  <p>This is what a salary calculator does — it converts your annual CTC into the actual monthly in-hand figure. Simple, but rarely explained properly. HR quotes CTC because it's a bigger number. The government and PF trust collect their share before you see your money. The salary calculator shows the middle layer that most employees don't understand until after they join.</p>
 
-    <h2>Components of CTC</h2>
-    <ul>
-      <li><strong>Basic Salary:</strong> Usually 40-50% of CTC. This is the base for PF, HRA, and gratuity calculations.</li>
-      <li><strong>HRA:</strong> House Rent Allowance, typically 40-50% of basic salary.</li>
-      <li><strong>Special Allowance:</strong> The remaining amount to balance CTC.</li>
-      <li><strong>PF Contribution:</strong> 12% of basic (employer's share).</li>
-      <li><strong>Gratuity:</strong> 4.81% of basic (accrued, paid on exit).</li>
-    </ul>
+  <h2>How to Use This Salary Calculator</h2>
+  <p>One input. Four outputs. That's the whole tool.</p>
 
-    <h2>Major Deductions from Gross Salary</h2>
-    <ul>
-      <li><strong>Employee PF:</strong> 12% of basic salary</li>
-      <li><strong>Income Tax:</strong> Based on your slab (both regimes)</li>
-      <li><strong>Professional Tax:</strong> ₹200-2,500/year (varies by state)</li>
-    </ul>
+  <p><strong>Annual CTC:</strong> The number on your offer letter. If the offer says "₹8,00,000 per annum," enter 800000. If it says "₹12 LPA," enter 1200000. This is Cost to Company — the total your employer spends on you, including their PF contribution and gratuity accrual.</p>
 
-    <h2>Example: ₹6 LPA CTC Breakdown</h2>
-    <ul>
-      <li>Monthly CTC: ₹50,000</li>
-      <li>Basic (40%): ₹20,000</li>
-      <li>HRA (40% of basic): ₹8,000</li>
-      <li>Special Allowance: ₹17,000</li>
-      <li>Employer PF (12% of basic): ₹2,400</li>
-      <li><strong>Monthly Take-Home: ~₹44,000-46,000</strong></li>
-    </ul>
+  <p>The calculator shows: Monthly Gross, Monthly PF, Monthly Tax, and Take-Home (Monthly). <strong>The output most users ignore is Monthly Tax</strong> — they focus on take-home and forget that if their investments change next year, the tax changes and the take-home changes too. A user who claims 80C and 80D gets a different tax than one who doesn't.</p>
 
-    <h2>How to Increase Your Take-Home Salary</h2>
-    <ul>
-      <li>Invest in tax-saving instruments (80C, 80D) if you're on the Old Regime</li>
-      <li>Submit rent receipts to claim HRA exemption</li>
-      <li>Choose the New Tax Regime if you don't have many deductions</li>
-      <li>Declare all investments properly to your employer at the start of the year</li>
-      <li>Use Flexible Benefit Plans (FBP) offered by many companies</li>
-    </ul>
+  <p>One important note: this calculator uses the <strong>New Tax Regime</strong> (FY 2025-26) by default, which is the current default for most salaried employees. If you're on the Old Regime with substantial deductions (80C, 80D, HRA, home loan interest), your actual tax will be lower, and take-home higher. Use the Income Tax Calculator to compare regimes for your specific income and deductions.</p>
 
-    <h2>Old vs New Tax Regime</h2>
-    <p>The Old Regime allows deductions (80C up to ₹1.5 lakh, 80D, HRA, home loan interest). The New Regime has lower slab rates but no major deductions except standard deduction. Choose whichever saves you more tax. Our calculator estimates both.</p>
+  <h2>The Salary Formula (And Why CTC ≠ Take-Home)</h2>
+  <p>Here's the flow: <em>CTC − Employer PF − Gratuity → Gross Salary. Gross − Employee PF − Income Tax − Professional Tax → Take-Home.</em></p>
 
-    <h2>Why Use Our Salary Calculator?</h2>
-    <p>Get a quick estimate of your monthly take-home from CTC. Understand your salary structure, plan your budget better, and know exactly how much reaches your bank each month.</p>
-  </section>
+  <p>The three deductions that matter most:</p>
+
+  <p><strong>Employee PF (12% of basic):</strong> Your contribution to the Employees' Provident Fund. Basic is typically 40-50% of CTC. So on ₹8 LPA with basic at ₹3.2 L, PF is ₹38,400/year or ₹3,200/month. This money isn't lost — it's your retirement corpus, and your employer matches it. But it's not liquid until retirement (or 2 months of unemployment).</p>
+
+  <p><strong>Income Tax (as per slabs):</strong> For the New Regime FY 2025-26, slabs are: ₹0-3L nil, ₹3-6L 5%, ₹6-9L 10%, ₹9-12L 15%, ₹12-15L 20%, above ₹15L 30%. On ₹8 LPA with ₹50,000 standard deduction, taxable income is ₹7.5L. Tax = ₹15,000 + ₹15,000 = ₹30,000. Add 4% cess = ₹31,200/year, or ₹2,600/month.</p>
+
+  <p><strong>Professional Tax (state-specific):</strong> ₹200-2,500/year depending on your state. Maharashtra, Karnataka, and West Bengal charge ₹200/month, but only for part of the year. Some states (like Delhi) don't charge professional tax at all. Small but visible on your payslip.</p>
+
+  <p>Why is CTC so much higher than take-home? Because CTC includes three things you don't see: the employer's PF contribution, gratuity accrual, and sometimes insurance premiums. On ₹8 LPA, employer PF is roughly ₹38,400, gratuity is ~₹15,000, and insurance might be ₹5,000. That's ₹58,000 right there — 7% of CTC gone before "salary" even starts.</p>
+
+  <h2>Real Examples at Different Scales</h2>
+
+  <p><strong>Example 1 — Entry Level (₹4,00,000 CTC)</strong><br>
+  Monthly gross: ₹33,333. Monthly PF: ₹1,600 (on 40% basic). Monthly tax: ₹0 (below taxable limit after standard deduction). Take-home: ~₹31,700/month. First job, no tax liability, PF builds slowly. This is the classic fresher scenario — offer says ₹4 LPA, take-home is ₹3.8 LPA effective.</p>
+
+  <p><strong>Example 2 — Mid-Career (₹8,00,000 CTC)</strong><br>
+  Monthly gross: ₹66,666. Monthly PF: ₹2,400. Monthly tax: ₹2,600. Take-home: ~₹61,600/month. This is where tax starts to bite — ₹31,200/year goes to income tax. New Regime is usually better at this income unless you have significant deductions. Old Regime with ₹1.5L 80C and ₹25k 80D might save ₹10,000-15,000 more.</p>
+
+  <p><strong>Example 3 — Senior Professional (₹18,00,000 CTC)</strong><br>
+  Monthly gross: ₹1,50,000. Monthly PF: ₹2,400 (PF is capped at ₹15,000 basic at most employers). Monthly tax: ₹20,800. Take-home: ~₹1,26,000/month. At this level, PF is capped (either 12% of ₹15,000 = ₹1,800/month, or you opt for higher VP contribution which reduces take-home). Income tax is now ₹2.5 lakh/year — significant enough that regime choice and tax planning matter a lot.</p>
+
+  <p><strong>Example 4 — Senior Executive (₹40,00,000 CTC)</strong><br>
+  Monthly gross: ₹3,33,333. Monthly PF: ₹1,800. Monthly tax: ₹75,000. Take-home: ~₹2,55,000/month. Tax is now 22% of gross. At this income, the new regime typically wins (higher slab rates but no deduction hunting), and ESOPs, RSUs, and deferred compensation need to be modeled separately since they're not part of standard CTC.</p>
+
+  <h2>Common Mistakes in Salary Calculation</h2>
+  <ul>
+    <li><strong>Assuming CTC/12 is monthly salary.</strong> CTC includes employer PF, gratuity, and insurance. The actual "gross monthly salary" is 8-12% lower than CTC/12. Take-home is another 10-25% lower, depending on tax slab. Users often budget based on CTC/12 and are shocked by the first payslip.</li>
+    <li><strong>Ignoring the New vs Old Regime choice.</strong> The default is now New Regime (lower tax if no deductions). But if you have ₹3-4 lakh in deductions (80C, 80D, HRA, home loan interest), Old Regime saves more. Communicating your choice to HR at the start of the financial year avoids over-deduction and refund hassles.</li>
+    <li><strong>Not claiming HRA if you rent.</strong> HRA exemption can save ₹30,000-1,00,000 per year depending on your rent and basic. But you must submit rent receipts and Form 12BB to your employer during the year. If you don't, TDS is deducted at a higher rate, and you have to claim the refund when filing ITR.</li>
+    <li><strong>Forgetting that PF is not lost.</strong> Users often complain about PF deduction as if it's tax. It's not — it's your retirement corpus, matched by your employer, earning 8.25% tax-free interest. Over 30 years, PF can become ₹1-2 crore. Frame it as forced savings, not as a loss.</li>
+  </ul>
+
+  <h2>When This Salary Calculator Doesn't Apply</h2>
+  <p>Salary structures vary widely. This calculator doesn't cover:</p>
+  <ul>
+    <li><strong>Variable pay, bonuses, ESOPs.</strong> If CTC includes ₹2L variable, that money only comes if you hit targets. The calculator treats the full CTC as fixed.</li>
+    <li><strong>Flexible Benefit Plans (FBP).</strong> Many companies offer FBP where you choose components (meal card, LTA, fuel reimbursement) to reduce taxable income. The tax savings vary based on your choices.</li>
+    <li><strong>VPF (Voluntary PF).</strong> If you contribute more than 12% to PF voluntarily, take-home reduces but retirement corpus grows. Not modeled here.</li>
+    <li><strong>State-specific professional tax and labour welfare fund.</strong> Amounts and rules vary. Kerala, Karnataka, Maharashtra, and West Bengal have different rates.</li>
+    <li><strong>NPS employer contribution.</strong> If your employer contributes to NPS (10-14% of basic), it's part of CTC but not modeled here.</li>
+  </ul>
+  <p>For a precise breakdown, ask HR for a detailed salary structure document — most companies share this before you accept the offer.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <p><strong>What is the difference between CTC and gross salary?</strong><br>
+  CTC (Cost to Company) includes employer PF contribution, gratuity accrual, and sometimes insurance premiums — money your employer spends on you but that doesn't reach your bank account. Gross salary is CTC minus these employer contributions. On a ₹8 LPA CTC, gross might be ₹7.4 lakh, and take-home ₹7.2 lakh after tax and PF. Three different numbers, three different concepts.</p>
+
+  <p><strong>Why is my take-home so much lower than CTC/12?</strong><br>
+  Because three things come out of CTC before you see money: employer PF (12% of basic), gratuity (4.81% of basic), and insurance premiums (₹5,000-15,000/year in many companies). Then employee PF (12% of basic) and income tax further reduce the in-hand amount. On ₹8 LPA, expect ₹58,000-62,000 per month as take-home, not ₹66,666.</p>
+
+  <p><strong>Is PF deduction mandatory?</strong><br>
+  Yes, for employees in establishments with 20+ employees, PF contribution of 12% of basic (up to ₹15,000 basic) is mandatory. You can opt for VPF (Voluntary PF) to contribute more, but you cannot opt out of the base 12%. Employers must contribute the matching amount. If your basic exceeds ₹15,000, most companies cap PF at 12% of ₹15,000 = ₹1,800/month, but some contribute on full basic.</p>
+
+  <p><strong>What is professional tax and how much is it?</strong><br>
+  Professional tax is a state-level tax on income, deducted from salary. Not all states levy it — Delhi doesn't, Karnataka and Maharashtra do. In Maharashtra, it's ₹200/month for salaries above ₹10,000. In Karnataka, it's ₹200/month for most brackets, but capped at ₹2,400/year. Maximum professional tax across all states is ₹2,500/year. Small amount, but it shows up on every payslip.</p>
+
+  <p><strong>How can I increase my take-home salary?</strong><br>
+  Three strategies: (1) Claim HRA exemption by submitting rent receipts and Form 12BB. (2) Structure salary with Flexible Benefit Plans (FBP) — meal cards, LTA, fuel reimbursement reduce taxable income. (3) Choose the tax regime that suits your deductions. On the Old Regime with ₹1.5L 80C + ₹25k 80D + HRA, take-home can increase by ₹20,000-50,000 per year compared to not claiming anything.</p>
+
+  <p><strong>What is the standard deduction in the new tax regime?</strong><br>
+  ₹50,000 per year, same as the old regime. It's a flat deduction from gross salary, no receipts required. On a ₹10 LPA salary, only ₹9.5L is taxable after standard deduction. This applies to both regimes — so it doesn't affect the regime choice, only the final taxable income.</p>
+
+  <h2>Why This Calculator Exists</h2>
+  <p>Salary math is confusing because three different numbers (CTC, gross, take-home) get used interchangeably in casual conversation. HR quotes CTC. Your bank account shows take-home. The actual monthly cash flow is somewhere in between after accounting for variable components. This calculator shows the exact breakdown for your income, so you can budget realistically. No signup, no ads in between.</p>
+
+  <p><em>Last updated: 18 September 2026</em></p>
+</section>
 
   <section class="content" id="related-calculators"></section>
 </div>
@@ -102,10 +155,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -115,7 +168,6 @@
   renderRelatedLinks('salary');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -16,11 +16,26 @@
 <meta property="og:title" content="Lumpsum Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate returns on one-time mutual fund investment.">
 <meta property="og:url" content="https://calqin.com/calculators/lumpsum-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lumpsum Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate lumpsum returns instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Lumpsum Calculator","url":"https://calqin.com/calculators/lumpsum-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Calculate one-time mutual fund investment returns.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Lumpsum Calculator","item":"https://calqin.com/calculators/lumpsum-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is lumpsum investment?","acceptedAnswer":{"@type":"Answer","text":"Lumpsum investment is investing a large amount at once in a mutual fund, as opposed to SIP. It's suitable when you have a surplus (bonus, inheritance, property sale) and a long investment horizon (7+ years)."}},
+{"@type":"Question","name":"Is lumpsum better than SIP?","acceptedAnswer":{"@type":"Answer","text":"In a rising market, lumpsum wins because your full amount compounds from day one. In a volatile market, SIP wins because rupee-cost averaging reduces timing risk. For most retail investors without market timing skill, SIP is safer."}},
+{"@type":"Question","name":"What is the lumpsum formula?","acceptedAnswer":{"@type":"Answer","text":"Future Value = P x (1 + R)^N, where P is investment amount, R is annual return rate (as decimal), and N is years. 1 lakh at 12% for 10 years becomes 3.1 lakh."}},
+{"@type":"Question","name":"When should I avoid lumpsum?","acceptedAnswer":{"@type":"Answer","text":"Avoid lumpsum if markets are at all-time highs, if you need the money within 2-3 years, if you're a beginner investor, or if you can't handle short-term volatility. In these cases, stagger the investment over 6-12 months via STP."}},
+{"@type":"Question","name":"What is STP and how is it different from lumpsum?","acceptedAnswer":{"@type":"Answer","text":"STP (Systematic Transfer Plan) means investing lumpsum in a debt fund and transferring it to equity gradually. It combines lumpsum availability with SIP-like averaging. Good middle ground for large windfalls."}},
+{"@type":"Question","name":"How is lumpsum taxed?","acceptedAnswer":{"@type":"Answer","text":"Equity mutual fund LTCG (holding over 1 year) above 1.25 lakh per year is taxed at 12.5%. Short-term gains (under 1 year) are taxed at 20%. Debt funds are taxed as per your income slab."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -93,10 +108,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 

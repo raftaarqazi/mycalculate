@@ -16,11 +16,26 @@
 <meta property="og:title" content="Unit Converter - Free Online Tool">
 <meta property="og:description" content="Convert length, weight, and temperature instantly. km to miles, kg to lb, °C to °F.">
 <meta property="og:url" content="https://calqin.com/calculators/unit-converter">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Unit Converter - Free Online Tool">
 <meta name="twitter:description" content="Convert units instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Unit Converter","url":"https://calqin.com/calculators/unit-converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Convert length, weight, and temperature units instantly.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://calqin.com/calculators/unit-converter"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I convert km to miles?","acceptedAnswer":{"@type":"Answer","text":"Multiply km by 0.621371. For example, 10 km = 6.21371 miles. Reverse: multiply miles by 1.60934 to get km. For rough estimate, remember 1 km is about 0.6 miles."}},
+{"@type":"Question","name":"How do I convert kg to pounds?","acceptedAnswer":{"@type":"Answer","text":"Multiply kg by 2.20462. For example, 70 kg = 154.32 pounds. Reverse: multiply pounds by 0.453592 to get kg. For rough estimate, 1 kg is about 2.2 pounds."}},
+{"@type":"Question","name":"What is the difference between metric and imperial?","acceptedAnswer":{"@type":"Answer","text":"Metric (SI) uses base-10 multiples — km, m, cm, kg, g. Used by almost all countries. Imperial uses non-decimal units — mile, yard, foot, pound, ounce. Used in the US, UK, and a few others."}},
+{"@type":"Question","name":"Why does the US use imperial units?","acceptedAnswer":{"@type":"Answer","text":"Historical reasons. The US adopted British imperial units before metric standardisation spread globally. Today the US is the only major country that primarily uses imperial for everyday measurements."}},
+{"@type":"Question","name":"How do I convert feet to meters?","acceptedAnswer":{"@type":"Answer","text":"Multiply feet by 0.3048. For example, 10 feet = 3.048 meters. Reverse: multiply meters by 3.28084 to get feet. A person 5 feet 6 inches tall is 1.676 meters."}},
+{"@type":"Question","name":"What is the most accurate way to convert units?","acceptedAnswer":{"@type":"Answer","text":"Use exact conversion factors (like 1 inch = 2.54 cm exactly, by definition). For everyday use, rounded values like 1 kg = 2.2 pounds work fine. For scientific or engineering use, always use the precise factor."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -110,10 +125,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -123,7 +138,6 @@
   renderRelatedLinks('unitConverter');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -16,11 +16,26 @@
 <meta property="og:title" content="Age Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate your exact age in years, months, and days instantly.">
 <meta property="og:url" content="https://calqin.com/calculators/age-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Age Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate your exact age instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Age Calculator","url":"https://calqin.com/calculators/age-calculator","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Calculate exact age in years, months, and days from date of birth.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Age Calculator","item":"https://calqin.com/calculators/age-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is age calculated?","acceptedAnswer":{"@type":"Answer","text":"Age is calculated by subtracting date of birth from today, handling different month lengths and leap years. The formula borrows days from the previous month if needed, and months from the previous year if the birth month is later than current month."}},
+{"@type":"Question","name":"Does this calculator account for leap years?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator uses actual month lengths (28, 29, 30, or 31 days) when borrowing days, so leap years are automatically handled in the total days calculation."}},
+{"@type":"Question","name":"Why is my age in years different from years-months-days?","acceptedAnswer":{"@type":"Answer","text":"The years-only number is your birthday-based age. Years-months-days gives the precise breakdown. For example, 25 years 8 months means you have completed 25 birthdays and 8 months toward the 26th."}},
+{"@type":"Question","name":"How many days old am I?","acceptedAnswer":{"@type":"Answer","text":"Enter your date of birth and the calculator shows total days lived. For example, a person born on 1 January 2000 has lived approximately 9,400 days by September 2026."}},
+{"@type":"Question","name":"Is this calculator accurate for government forms?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator provides age in years, months, and days — the standard format required by most government forms, school admissions, and job applications in India."}},
+{"@type":"Question","name":"Can I calculate age on a future date?","acceptedAnswer":{"@type":"Answer","text":"The current version uses today's date. For future-date age calculation, note your current age and add the difference manually, or use the Date Difference Calculator."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -54,7 +69,7 @@
     <h2>How Age is Calculated</h2>
     <p>Age calculation involves subtracting your date of birth from the current date. The tricky part is handling different month lengths and leap years:</p>
     <ul>
-      <li>If today's day is less than your birth day, borrow one month and add 30 days</li>
+      <li>If today's day is less than your birth day, borrow days from the previous month (28, 29, 30, or 31 depending on the month)</li>
       <li>If today's month is less than your birth month, borrow one year and add 12 months</li>
       <li>Total days are calculated by dividing the difference in milliseconds by 86,400,000</li>
     </ul>
@@ -87,10 +102,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -100,7 +115,6 @@
   renderRelatedLinks('age');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

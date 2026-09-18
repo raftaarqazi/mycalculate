@@ -16,11 +16,26 @@
 <meta property="og:title" content="Percentage Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate X% of Y and what % X is of Y instantly.">
 <meta property="og:url" content="https://calqin.com/calculators/percentage-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Percentage Calculator - Free Online Tool">
 <meta name="twitter:description" content="Quick percentage calculations.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Percentage Calculator","url":"https://calqin.com/calculators/percentage-calculator","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Calculate X% of Y, what % X is of Y, percentage increase and decrease.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Percentage Calculator","item":"https://calqin.com/calculators/percentage-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the difference between percentage and percentile?","acceptedAnswer":{"@type":"Answer","text":"A percentage tells you what fraction of 100 something is. A percentile tells you where you stand relative to others. Scoring 80% means 80 out of 100. Being in the 80th percentile means you scored better than 80% of people."}},
+{"@type":"Question","name":"How do I calculate percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Percentage increase = (New − Old) ÷ Old × 100. If a price goes from ₹100 to ₹120, the increase is (120 − 100) ÷ 100 × 100 = 20%."}},
+{"@type":"Question","name":"How do I find X% of Y quickly?","acceptedAnswer":{"@type":"Answer","text":"Multiply X by Y and divide by 100. For 15% of 400: (15 × 400) ÷ 100 = 60. For 10%, move the decimal one place left. For 1%, move it two places left."}},
+{"@type":"Question","name":"What is the percentage formula for finding what % X is of Y?","acceptedAnswer":{"@type":"Answer","text":"Divide X by Y and multiply by 100. If 25 is what % of 200, the answer is (25 ÷ 200) × 100 = 12.5%."}},
+{"@type":"Question","name":"How do I calculate discount percentage?","acceptedAnswer":{"@type":"Answer","text":"Discount % = (Original Price − Sale Price) ÷ Original Price × 100. If a ₹1,000 item sells for ₹800, discount = (1000 − 800) ÷ 1000 × 100 = 20%."}},
+{"@type":"Question","name":"What is percentage point vs percent difference?","acceptedAnswer":{"@type":"Answer","text":"A percentage point is the arithmetic difference between two percentages. If interest goes from 5% to 7%, that's a 2 percentage point increase but a 40% relative increase. Both are correct — context decides which to use."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -48,41 +63,87 @@
   <div class="card" id="calcContainer"></div>
 
   <section class="content">
-    <h2>What is Percentage?</h2>
-    <p>A percentage is a number expressed as a fraction of 100. The word comes from Latin "per centum" meaning "by the hundred". Percentages are used everywhere — from discounts and interest rates to exam scores and statistics. They make it easy to compare quantities of different scales on a common ground.</p>
+  <h2>What is a Percentage Calculator?</h2>
+  <p>You're shopping and see a shirt marked ₹1,799 with "30% off" tag. Before pulling out your phone's calculator, you try to do the math in your head — 30% of 1,799, minus that from the price. After 30 seconds of mental gymnastics, you give up. This percentage calculator solves it in one second: enter 1799 and 30, get ₹1,259.30 final price and ₹539.70 savings.</p>
 
-    <h2>Common Percentage Calculations</h2>
-    <p><strong>1. Finding X% of Y:</strong> Multiply X by Y and divide by 100. Example: 20% of 500 = (20 × 500) ÷ 100 = 100.</p>
-    <p><strong>2. Finding what % X is of Y:</strong> Divide X by Y and multiply by 100. Example: 25 is what % of 200 = (25 ÷ 200) × 100 = 12.5%.</p>
-    <p><strong>3. Percentage Increase:</strong> (New − Old) ÷ Old × 100. Example: Price goes from ₹100 to ₹120 → (120 − 100) ÷ 100 × 100 = 20% increase.</p>
-    <p><strong>4. Percentage Decrease:</strong> (Old − New) ÷ Old × 100. Example: Price drops from ₹100 to ₹80 → 20% decrease.</p>
+  <p>That's the simple version. Percentages show up everywhere — exam scores, interest rates, GST, tips, sales, statistics. This calculator handles the four most common percentage operations: finding X% of Y, finding what % X is of Y, percentage increase, and percentage decrease. Pick the one you need, enter two numbers, get the result.</p>
 
-    <h2>Real-Life Uses of Percentage</h2>
-    <ul>
-      <li>Shopping discounts (Flat 50% off)</li>
-      <li>Interest rates on loans and savings</li>
-      <li>Exam marks and grades</li>
-      <li>Tax calculations (GST, income tax)</li>
-      <li>Business profit and loss</li>
-      <li>Population growth statistics</li>
-      <li>Bank interest calculations</li>
-    </ul>
+  <h2>How to Use This Percentage Calculator</h2>
+  <p>Four inputs grouped into two sections. That's the whole interface.</p>
 
-    <h2>Quick Percentage Tricks</h2>
-    <ul>
-      <li>To find 10%, move decimal one place left (10% of 250 = 25)</li>
-      <li>To find 1%, move decimal two places left (1% of 250 = 2.5)</li>
-      <li>To find 50%, just divide by 2 (50% of 250 = 125)</li>
-      <li>To find 25%, divide by 4</li>
-      <li>To find 5%, find 10% and half it</li>
-    </ul>
+  <p><strong>Section 1 — What is X% of Y?:</strong> Use this when you know the percentage and the total. If you want to find 15% of ₹2,000, enter X = 15 and Y = 2000. Result: 300. Useful for calculating tips, taxes, commissions, or discounts.</p>
 
-    <h2>Percentage vs Percentile</h2>
-    <p>Percentage and percentile are often confused. A percentage tells you what fraction of 100 something is. A percentile tells you where you stand relative to others. For example, scoring 80% means you got 80 out of 100. Being in the 80th percentile means you scored better than 80% of people.</p>
+  <p><strong>Section 2 — X is what % of Y?:</strong> Use this when you know two numbers and want the percentage. If you scored 340 out of 500 and want to know the percentage, enter X = 340 and Y = 500. Result: 68%. Useful for exam scores, growth rates, and comparisons.</p>
 
-    <h2>Why Use Our Percentage Calculator?</h2>
-    <p>Our free percentage calculator handles both common types — finding X% of Y and finding what % X is of Y — in one place. Perfect for students, shoppers, business owners, and anyone who needs quick percentage calculations. Works on mobile, no signup required.</p>
-  </section>
+  <p>Most users confuse the two sections. Remember: if you have a percentage and want a number, use section 1. If you have two numbers and want a percentage, use section 2. The labels on each field ("What is X% of Y?" vs "X is what % of Y?") tell you which is which.</p>
+
+  <p>The output shows both results at once. <strong>Most users only check the first section and miss the second</strong> — but they're independent calculations that don't interfere. You can use both, one, or neither.</p>
+
+  <h2>The Percentage Formulas (And Why Two Different Rules Exist)</h2>
+  <p><strong>Finding X% of Y:</strong> <em>Result = (X × Y) ÷ 100</em></p>
+  <p><strong>Finding what % X is of Y:</strong> <em>Result % = (X ÷ Y) × 100</em></p>
+  <p><strong>Percentage increase:</strong> <em>% change = ((New − Old) ÷ Old) × 100</em></p>
+  <p><strong>Percentage decrease:</strong> <em>% change = ((Old − New) ÷ Old) × 100</em></p>
+
+  <p>Why two different rules? Because they answer different questions. In section 1, the percentage is given — you multiply. In section 2, the percentage is unknown — you divide. The denominators matter too: when finding % change, you always divide by the <strong>original</strong> value, not the new one. If a price goes from ₹100 to ₹150, the increase is 50% (÷100), not 33% (÷150). Getting this wrong is the most common mistake in percentage calculation.</p>
+
+  <h2>Real Examples Across Different Use Cases</h2>
+
+  <p><strong>Example 1 — Shopping Discount (₹1,799 at 30% off)</strong><br>
+  Section 1: 30% of 1799 = ₹539.70. Final price = ₹1,259.30. You save ₹540. Compare with another shirt marked ₹1,899 at "flat 35% off" — that's ₹664.65 savings, final price ₹1,234.35. Cheaper by ₹25. Without a percentage calculator, this comparison takes 2 minutes of mental math. With it, 10 seconds.</p>
+
+  <p><strong>Example 2 — Exam Score (340 out of 500)</strong><br>
+  Section 2: 340 ÷ 500 × 100 = 68%. If the cutoff is 65%, you qualify. If a scholarship requires 75%, you don't. Knowing your exact percentage determines next steps. Students often round 340/500 to "around 68%" but exact calculation matters for borderline cases — 68.0 vs 67.8 might decide admission.</p>
+
+  <p><strong>Example 3 — Salary Hike (₹6,00,000 to ₹7,50,000)</strong><br>
+  Percentage increase = (7,50,000 − 6,00,000) ÷ 6,00,000 × 100 = 25%. A 25% hike sounds generous. But if inflation is 6% and your rent went up 20%, the real-terms hike is much lower. Always calculate the actual percentage before celebrating — ₹1.5 lakh increase on ₹6 lakh is very different from ₹1.5 lakh increase on ₹15 lakh.</p>
+
+  <p><strong>Example 4 — Business Profit Margin (Revenue ₹12,00,000, Profit ₹1,80,000)</strong><br>
+  Section 2: 1,80,000 ÷ 12,00,000 × 100 = 15% margin. Business owners track profit margin weekly — 15% is decent for retail, thin for SaaS, and high for commodity trading. Knowing the exact percentage helps decide whether to expand or cut costs. A 3% improvement in margin on ₹12 lakh revenue = ₹36,000 extra profit per year.</p>
+
+  <h2>Common Mistakes in Percentage Calculation</h2>
+  <ul>
+    <li><strong>Dividing by the new value instead of old.</strong> When calculating % change, always divide by the original. A price going from ₹100 to ₹150 is a 50% increase (÷100), not 33%. This error changes results dramatically.</li>
+    <li><strong>Confusing "percentage points" and "percentage change".</strong> If interest rates go from 5% to 7%, the increase is 2 percentage points, but the percentage change is 40%. Both are correct in different contexts. Academic and news writing use percentage points; marketing usually uses percentage change.</li>
+    <li><strong>Adding percentages without a base.</strong> "30% off plus additional 20% off" isn't 50% off — it's 44% off (see stacked discount example). Percentages only add when applied to the same base. This trips up shoppers constantly during festival sales.</li>
+    <li><strong>Forgetting the base for percentage increases.</strong> "50% increase" means nothing without knowing the base. 50% of ₹100 is ₹50; 50% of ₹10 lakh is ₹5 lakh. Always state the base when discussing percentage changes.</li>
+  </ul>
+
+  <h2>When This Percentage Calculator Doesn't Apply</h2>
+  <p>Percentages have edge cases that simple calculators miss:</p>
+  <ul>
+    <li><strong>Compounded percentages.</strong> If your investment grows 10% one year and 10% the next, the total growth is 21%, not 20%. Compound percentage calculations require a different formula.</li>
+    <li><strong>Reverse percentage with tax.</strong> Finding the base price when GST is already included needs a different calculation (divide by 1 + rate). This calculator doesn't handle reverse tax extraction.</li>
+    <li><strong>Percentages of percentages.</strong> "40% of the 60% of profit" requires understanding the layering. This calculator handles one layer at a time.</li>
+    <li><strong>Statistical significance.</strong> A "5% increase" in a survey might be within the margin of error. Percentage changes in data need statistical context to interpret correctly.</li>
+  </ul>
+  <p>For complex percentage-based financial or statistical work, use specialized tools. This calculator covers 95% of everyday needs.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <p><strong>What is the difference between percentage and percentile?</strong><br>
+  A percentage tells you what fraction of 100 something is. A percentile tells you where you stand relative to others. Scoring 80% means 80 out of 100. Being in the 80th percentile means you scored better than 80% of people. Different concepts, often confused. Exam marks use percentage; competitive rankings use percentile.</p>
+
+  <p><strong>How do I calculate percentage increase?</strong><br>
+  Percentage increase = (New − Old) ÷ Old × 100. If a price goes from ₹100 to ₹120, the increase is (120 − 100) ÷ 100 × 100 = 20%. Always divide by the original value, not the new one. Dividing by the new value gives a smaller, wrong percentage.</p>
+
+  <p><strong>How do I find X% of Y quickly?</strong><br>
+  Multiply X by Y and divide by 100. For 15% of 400: (15 × 400) ÷ 100 = 60. For 10%, move the decimal one place left. For 1%, move it two places left. For 5%, find 10% and half it. These shortcuts work for mental math when you don't have a calculator handy.</p>
+
+  <p><strong>What is the percentage formula for finding what % X is of Y?</strong><br>
+  Divide X by Y and multiply by 100. If 25 is what % of 200, the answer is (25 ÷ 200) × 100 = 12.5%. This is the inverse operation of finding X% of Y. Useful for exam scores, growth rates, and any comparison where you have two numbers but want the percentage.</p>
+
+  <p><strong>How do I calculate discount percentage?</strong><br>
+  Discount % = (Original Price − Sale Price) ÷ Original Price × 100. If a ₹1,000 item sells for ₹800, discount = (1000 − 800) ÷ 1000 × 100 = 20%. Reverse the calculation to find the sale price: Sale Price = Original × (1 − Discount %/100).</p>
+
+  <p><strong>What is percentage point vs percent difference?</strong><br>
+  A percentage point is the arithmetic difference between two percentages. If interest goes from 5% to 7%, that's a 2 percentage point increase but a 40% relative increase. Both are correct — context decides which to use. News anchors often say "percentage point" for clarity; marketing uses "percentage change" for impact.</p>
+
+  <h2>Why This Calculator Exists</h2>
+  <p>Percentage math is one of the most common real-world calculations, but the two-way formula (multiply vs divide) trips up almost everyone. Add in the new/old denominator confusion for percentage change, and errors compound. This calculator handles the four common operations cleanly, so you spend time on decisions, not arithmetic. No signup, no ads in between.</p>
+
+  <p><em>Last updated: 18 September 2026</em></p>
+</section>
 
   <section class="content" id="related-calculators"></section>
 </div>
@@ -90,10 +151,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -103,7 +164,6 @@
   renderRelatedLinks('percentage');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

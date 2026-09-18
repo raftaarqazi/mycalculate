@@ -16,11 +16,26 @@
 <meta property="og:title" content="Discount Calculator - Free Online Tool">
 <meta property="og:description" content="Calculate final price after discount instantly. Perfect for shopping.">
 <meta property="og:url" content="https://calqin.com/calculators/discount-calculator">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Discount Calculator - Free Online Tool">
 <meta name="twitter:description" content="Calculate discount and savings instantly.">
+<meta name="twitter:image" content="https://calqin.com/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Discount Calculator","url":"https://calqin.com/calculators/discount-calculator","applicationCategory":"ShoppingApplication","operatingSystem":"Any","description":"Calculate final price after percentage discount and savings amount.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calqin.com/"},{"@type":"ListItem","position":2,"name":"Discount Calculator","item":"https://calqin.com/calculators/discount-calculator"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is discount calculated?","acceptedAnswer":{"@type":"Answer","text":"Discount amount = Original Price x Discount % / 100. Final price = Original Price minus Discount amount. For 1,000 at 20% off, discount is 200, final price is 800."}},
+{"@type":"Question","name":"What is a stacked discount?","acceptedAnswer":{"@type":"Answer","text":"Stacked discount means applying one discount on top of another. A 20% off plus extra 10% off is NOT 30% off — it's 28% off. The second discount applies to the already-reduced price, not the original."}},
+{"@type":"Question","name":"Is 20% off the same as pay for 4 get 5?","acceptedAnswer":{"@type":"Answer","text":"No. 20% off means you pay 80% of the price. Pay for 4 get 5 means 5 items for the price of 4, which is 20% off per item. They're equivalent in total."}},
+{"@type":"Question","name":"How do I check if a discount is genuine?","acceptedAnswer":{"@type":"Answer","text":"Compare final price with the product's price at other stores, not with the MRP. Some sellers inflate the MRP to show a larger discount. The actual final price is what matters."}},
+{"@type":"Question","name":"What does up to X percent off mean?","acceptedAnswer":{"@type":"Answer","text":"Up to 50% off means some items are at 50% but most are at lower discounts. It's a marketing tactic. Always check the specific item's discount, not the banner."}},
+{"@type":"Question","name":"Does GST apply before or after discount?","acceptedAnswer":{"@type":"Answer","text":"GST is calculated on the discounted price, not on the original MRP. If a 1,000 item is 20% off, GST applies to the 800 final price, not 1,000."}}
+]}
 </script>
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,13 +44,13 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
-      <a href="#calculators">Calculators</a>
+      <a href="/#calculators">Calculators</a>
       <a href="/blog/">Blog</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -84,10 +99,10 @@
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
+    <a href="/about">About</a> |
+    <a href="/privacy">Privacy</a> |
+    <a href="/terms">Terms</a> |
+    <a href="/contact">Contact</a>
   </p>
 </footer>
 
@@ -97,7 +112,6 @@
   renderRelatedLinks('discount');
 </script>
 
-<!-- Google Analytics (Replace G-T1C2SXJPZK with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
