@@ -624,13 +624,3 @@ function renderRelatedLinks(currentCalcKey) {
   html += '</div>';
   container.innerHTML = html;
 }
-
-// ===== GLOBAL INIT (runs on every page) =====
-document.addEventListener('DOMContentLoaded', () => {
-  // Auto-close mobile menu on link click
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.querySelector('.nav-links')?.classList.remove('open');
-    });
-  });
-});

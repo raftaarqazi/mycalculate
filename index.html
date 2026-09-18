@@ -12,6 +12,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="canonical" href="https://calqin.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Calqin - 30+ Free Online Calculators">
@@ -44,6 +47,7 @@
   </div>
 </header>
 
+<main>
 <section class="hero">
   <h1>30+ Free Online Calculators</h1>
   <p>Fast, accurate, and easy to use — for finance, health, and everyday needs</p>
@@ -242,6 +246,7 @@
   </div>
 
 </div>
+</main>
 
 <footer>
   <p>© 2026 Calqin.com — Free Online Calculators</p>
@@ -254,7 +259,6 @@
 </footer>
 
 <script>
-  // Search filter
   document.getElementById('searchInput').addEventListener('input', function(e) {
     const q = e.target.value.toLowerCase().trim();
     document.querySelectorAll('.calc-card').forEach(card => {
@@ -271,22 +275,9 @@
       }
     });
   });
-
-  // Close mobile menu on link click
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.querySelector('.nav-links')?.classList.remove('open');
-    });
-  });
 </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T1C2SXJPZK');
-</script>
+<script src="/common.js" defer></script>
 
 </body>
 </html>

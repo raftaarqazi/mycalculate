@@ -11,6 +11,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="canonical" href="https://calqin.com/calculators/salary-calculator">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Salary Calculator - Free Online Tool">
@@ -55,12 +58,18 @@
   </div>
 </header>
 
-<div class="container">
+<main class="container">
   <div class="breadcrumb">
     <a href="/">Home</a> › Salary Calculator
   </div>
 
-  <div class="card" id="calcContainer"></div>
+  <div class="card" id="calcContainer">
+    <noscript>
+      <div class="noscript-msg">
+        This calculator requires JavaScript. Please enable JavaScript in your browser to use it.
+      </div>
+    </noscript>
+  </div>
 
   <section class="content">
   <h2>What is a Salary Calculator?</h2>
@@ -150,7 +159,7 @@
 </section>
 
   <section class="content" id="related-calculators"></section>
-</div>
+</main>
 
 <footer>
   <p>© 2026 calqin.com — Free Online Calculators</p>
@@ -168,13 +177,7 @@
   renderRelatedLinks('salary');
 </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1C2SXJPZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T1C2SXJPZK');
-</script>
+<script src="/common.js" defer></script>
 
 </body>
 </html>
