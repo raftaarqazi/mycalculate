@@ -43,11 +43,12 @@ main.container{display:block}
 .calc-card h3{font-size:1rem;font-weight:700;color:#1f2937;margin:0}
 .calc-card p{font-size:0.82rem;color:#6b7280;line-height:1.4;margin:0}
 
-/* ===== CARD / FIELDS ===== */
-.card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:1.2rem}
+/* ===== CARD / FIELDS (CLS FIX) ===== */
+.card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:1.2rem;min-height:450px}
+#calcContainer{min-height:450px;content-visibility:auto;contain-intrinsic-size:auto 450px}
 .card h2{font-size:1.25rem;margin-bottom:1rem;color:#1f2937}
 .field{margin-bottom:1rem}
-.field label{display:block;margin-bottom:.35rem;font-weight:600;color:#374151;font-size:.9rem}
+.field label,.field .label-text{display:block;margin-bottom:.35rem;font-weight:600;color:#374151;font-size:.9rem}
 .field input,.field select{width:100%;padding:.65rem .85rem;border:2px solid #e5e7eb;border-radius:8px;font-size:1rem;outline:none;font-family:inherit}
 .field input:focus,.field select:focus{border-color:#4f46e5}
 .radio-group{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.3rem}
@@ -86,10 +87,10 @@ footer{background:#fff;border-top:1px solid #e5e7eb;text-align:center;padding:1.
 footer a{color:#4f46e5;text-decoration:none;margin:0 .4rem}
 footer a:hover{text-decoration:underline}
 
-/* ===== BREADCRUMB ===== */
-.breadcrumb{font-size:.85rem;color:#6b7280;margin-bottom:.8rem}
-.breadcrumb a{color:#4f46e5;text-decoration:none}
-.breadcrumb a:hover{text-decoration:underline}
+/* ===== BREADCRUMB (CONTRAST FIX) ===== */
+.breadcrumb{font-size:.85rem;color:#4b5563;margin-bottom:.8rem}
+.breadcrumb a{color:#4338ca;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.breadcrumb a:hover{color:#4f46e5;text-decoration-thickness:2px}
 
 /* ===== INFO BOX ===== */
 .info-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:.8rem 1rem;border-radius:6px;font-size:.85rem;margin-top:1rem;color:#78350f}
@@ -126,4 +127,6 @@ footer a:hover{text-decoration:underline}
   .calc-card{padding:0.9rem}
   .calc-card h3{font-size:0.9rem}
   .calc-card p{font-size:0.75rem}
+  .card{min-height:400px}
+  #calcContainer{min-height:400px}
 }

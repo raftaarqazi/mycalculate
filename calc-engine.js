@@ -1,7 +1,6 @@
 const fmtINR = n => '₹' + Number(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmtNum = n => Number(n).toLocaleString('en-IN',{maximumFractionDigits:2});
 
-// Mapping: CALC key -> HTML file name (no .html, no leading slash — Vercel cleanUrls)
 const CALC_SLUGS = {
   gst: 'gst-calculator',
   emi: 'emi-calculator',
@@ -35,7 +34,6 @@ const CALC_SLUGS = {
   dateDiff: 'date-difference-calculator'
 };
 
-// Related calculators mapping
 const RELATED = {
   gst: ['discount','salaryTax','salary','percentage'],
   emi: ['homeLoanEligibility','carLoan','personalLoan','salaryTax'],
@@ -135,11 +133,7 @@ const CALCS = {
       let y=now.getFullYear()-dob.getFullYear();
       let m=now.getMonth()-dob.getMonth();
       let d=now.getDate()-dob.getDate();
-      if(d<0){
-        m--;
-        const daysInPrevMonth=new Date(now.getFullYear(),now.getMonth(),0).getDate();
-        d+=daysInPrevMonth;
-      }
+      if(d<0){m--;const dm=new Date(now.getFullYear(),now.getMonth(),0).getDate();d+=dm;}
       if(m<0){y--;m+=12;}
       const months=y*12+m;
       const days=Math.floor((now-dob)/86400000);
@@ -518,7 +512,6 @@ const CALCS = {
 };
 
 // ===== SHARE RESULT =====
-// Fix: URL removed from share/copy so WhatsApp doesn't show link preview (which shows logo fallback)
 function shareCalcResult(calcName) {
   const el = document.querySelector('[data-result]');
   if (!el) return;
@@ -543,20 +536,29 @@ function renderCalc(elId, calcKey) {
 
   let html = `<h1 class="page-title">${calc.name}</h1>`;
   calc.fields.forEach(f => {
-    html += `<div class="field"><label>${f.l}</label>`;
-    if (f.t === 'select') {
-      html += `<select data-k="${f.k}">`;
-      f.o.forEach(([val, txt]) => { html += `<option value="${val}"${val == f.v ? ' selected' : ''}>${txt}</option>`; });
-      html += `</select>`;
-    } else if (f.t === 'radio') {
+    const fieldId = `${calcKey}-${f.k}`;
+    if (f.t === 'radio') {
+      html += `<div class="field"><span class="label-text">${f.l}</span>`;
       html += `<div class="radio-group">`;
-      f.o.forEach(([val, txt]) => { html += `<label><input type="radio" name="${calcKey}-${f.k}" value="${val}" data-k="${f.k}"${val == f.v ? ' checked' : ''}>${txt}</label>`; });
-      html += `</div>`;
+      f.o.forEach(([val, txt]) => {
+        const radioId = `${fieldId}-${val}`;
+        html += `<label for="${radioId}"><input type="radio" id="${radioId}" name="${fieldId}" value="${val}" data-k="${f.k}"${val == f.v ? ' checked' : ''}>${txt}</label>`;
+      });
+      html += `</div></div>`;
     } else {
-      const minAttr = f.t === 'number' ? ' min="0"' : '';
-      html += `<input type="${f.t}" data-k="${f.k}" value="${f.v}"${f.step ? ` step="${f.step}"` : ''}${minAttr}>`;
+      html += `<div class="field"><label for="${fieldId}">${f.l}</label>`;
+      if (f.t === 'select') {
+        html += `<select id="${fieldId}" data-k="${f.k}">`;
+        f.o.forEach(([val, txt]) => {
+          html += `<option value="${val}"${val == f.v ? ' selected' : ''}>${txt}</option>`;
+        });
+        html += `</select>`;
+      } else {
+        const minAttr = f.t === 'number' ? ' min="0"' : '';
+        html += `<input type="${f.t}" id="${fieldId}" data-k="${f.k}" value="${f.v}"${f.step ? ` step="${f.step}"` : ''}${minAttr}>`;
+      }
+      html += `</div>`;
     }
-    html += `</div>`;
   });
   html += `<div class="result show" data-result></div>`;
   html += `<button type="button" class="share-btn" onclick="shareCalcResult('${calc.name.replace(/'/g, "\\'")}')">📤 Share / Copy Result</button>`;
