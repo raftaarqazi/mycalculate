@@ -518,14 +518,15 @@ const CALCS = {
 };
 
 // ===== SHARE RESULT =====
+// Fix: URL removed from share/copy so WhatsApp doesn't show link preview (which shows logo fallback)
 function shareCalcResult(calcName) {
   const el = document.querySelector('[data-result]');
   if (!el) return;
-  const text = calcName + '\n' + el.innerText + '\n\nCalculated at calqin.com';
+  const text = calcName + '\n' + el.innerText + '\n\n— calqin.com';
   if (navigator.share) {
-    navigator.share({ title: calcName + ' - Calqin', text: text, url: location.href }).catch(() => {});
+    navigator.share({ title: calcName, text: text }).catch(() => {});
   } else if (navigator.clipboard) {
-    navigator.clipboard.writeText(text + '\n' + location.href).then(() => {
+    navigator.clipboard.writeText(text).then(() => {
       alert('✅ Result copied! Paste it anywhere.');
     }).catch(() => {
       alert('Could not copy. Please select and copy manually.');
