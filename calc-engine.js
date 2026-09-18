@@ -516,17 +516,35 @@ function shareCalcResult(calcName) {
   const el = document.querySelector('[data-result]');
   if (!el) return;
   const text = calcName + '\n' + el.innerText + '\n\n— calqin.com';
+
+  const showToast = (msg) => {
+    let toast = document.getElementById('calqin-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'calqin-toast';
+      toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:#1f2937;color:#fff;padding:.8rem 1.2rem;border-radius:8px;font-size:.9rem;font-weight:500;z-index:9999;transition:transform .3s ease;box-shadow:0 4px 20px rgba(0,0,0,.3);font-family:inherit';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    requestAnimationFrame(() => {
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+    });
+    clearTimeout(toast._hideTimer);
+    toast._hideTimer = setTimeout(() => {
+      toast.style.transform = 'translateX(-50%) translateY(120px)';
+    }, 2500);
+  };
+
   if (navigator.share) {
     navigator.share({ title: calcName, text: text }).catch(() => {});
   } else if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(() => {
-      alert('✅ Result copied! Paste it anywhere.');
+      showToast('✅ Result copied!');
     }).catch(() => {
-      alert('Could not copy. Please select and copy manually.');
+      showToast('Could not copy. Please select and copy manually.');
     });
   }
 }
-
 // ===== RENDER ENGINE =====
 function renderCalc(elId, calcKey) {
   const calc = CALCS[calcKey];

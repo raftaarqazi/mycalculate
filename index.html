@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#4f46e5">
+<meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
 <meta name="description" content="30+ Free online calculators for GST, EMI, SIP, BMI, Age, Tax, Loan, Investment and more. Fast, accurate, mobile-friendly.">
 <meta name="keywords" content="gst calculator, emi calculator, sip calculator, bmi calculator, income tax calculator, fd calculator, ppf calculator, hra calculator">
 <title>Calqin - 30+ Free Online Calculators | GST, EMI, SIP, Tax</title>
@@ -12,9 +13,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-
-
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="canonical" href="https://calqin.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Calqin - 30+ Free Online Calculators">
@@ -22,10 +24,14 @@
 <meta property="og:url" content="https://calqin.com/">
 <meta property="og:site_name" content="Calqin">
 <meta property="og:image" content="https://calqin.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Calqin - 30+ Free Online Calculators">
 <meta name="twitter:description" content="Free online calculators for GST, EMI, SIP, BMI, Age, Percentage and more.">
 <meta name="twitter:image" content="https://calqin.com/og-image.png">
+<meta name="twitter:image:alt" content="Calqin - Free Online Calculators">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Calqin","url":"https://calqin.com/","description":"Free online calculators for GST, EMI, SIP, BMI, Age, Percentage, and more.","potentialAction":{"@type":"SearchAction","target":"https://calqin.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
@@ -36,7 +42,7 @@
 <header class="app-header">
   <div class="nav-wrap">
     <a href="/" class="logo">Calqin<span>.com</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <nav class="nav-links">
       <a href="/">Home</a>
       <a href="/#calculators">Calculators</a>
@@ -51,9 +57,9 @@
 <section class="hero">
   <h1>30+ Free Online Calculators</h1>
   <p>Fast, accurate, and easy to use — for finance, health, and everyday needs</p>
-  <div class="search-wrap">
+  <div class="search-wrap" role="search">
     <span class="search-icon" aria-hidden="true">🔍</span>
-    <input type="search" id="searchInput" class="search-input" placeholder="Search calculator... (GST, EMI, SIP, BMI)" aria-label="Search calculator">
+    <input type="search" id="searchInput" class="search-input" placeholder="Search calculator... (GST, EMI, SIP, BMI)" aria-label="Search calculator" aria-controls="calculators">
   </div>
 </section>
 
@@ -249,7 +255,7 @@
 </main>
 
 <footer>
-  <p>© 2026 Calqin.com — Free Online Calculators</p>
+  <p>© <span id="year">2026</span> Calqin.com — Free Online Calculators</p>
   <p style="margin-top:.5rem">
     <a href="/about">About</a> |
     <a href="/privacy">Privacy</a> |
@@ -258,24 +264,7 @@
   </p>
 </footer>
 
-<script>
-  document.getElementById('searchInput').addEventListener('input', function(e) {
-    const q = e.target.value.toLowerCase().trim();
-    document.querySelectorAll('.calc-card').forEach(card => {
-      const name = card.dataset.name || '';
-      const text = card.textContent.toLowerCase();
-      card.style.display = (!q || name.includes(q) || text.includes(q)) ? '' : 'none';
-    });
-    document.querySelectorAll('.calc-category').forEach(cat => {
-      const visible = cat.querySelectorAll('.calc-card:not([style*="display: none"])');
-      if (visible.length === 0 && cat.querySelector('.calc-grid')) {
-        cat.style.display = 'none';
-      } else {
-        cat.style.display = '';
-      }
-    });
-  });
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 <script src="/common.js" defer></script>
 
