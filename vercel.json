@@ -1,10 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/calculators/:slug.html", "destination": "/calculators/:slug", "permanent": true },
-    { "source": "/:page.html", "destination": "/:page", "permanent": true }
-  ],
   "headers": [
     {
       "source": "/(.*)",

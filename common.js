@@ -53,11 +53,13 @@
     });
   }
 
-  function setupMenu() {
+ function setupMenu() {
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-links');
 
     if (toggle && nav) {
+      // Remove old inline onclick if present (from un-updated pages)
+      toggle.removeAttribute('onclick');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('open');
@@ -74,7 +76,6 @@
       });
     });
   }
-
   function setupSearch() {
     const searchInput = document.getElementById('searchInput');
     if (!searchInput) return;
